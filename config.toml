@@ -1,0 +1,4 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Sanchit Arora"
+theme = "hugo-uilite"

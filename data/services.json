@@ -1,0 +1,15 @@
+{
+	"title" : "Projects",
+	"services" : [
+		{
+			"icon" : "pencil-ruler",
+			"title" : "Hacker Newspaper",
+			"description" : "Nunc sapien nisi, maximus eleifend hendrerit sit amet, rutrum vel diam. Duis quam nibh, tincidunt eget nunc nec, suscipit pretium dolor. "
+		},
+		{
+			"icon" : "pen-nib",
+			"title" : "Android App Development",
+			"description" : "Nunc sapien nisi, maximus eleifend hendrerit sit amet, rutrum vel diam. Duis quam nibh, tincidunt eget nunc nec, suscipit pretium dolor. "
+		}
+	]
+}

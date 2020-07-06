@@ -1,0 +1,15 @@
+{
+	"title" : "Education",
+	"experience" : [
+		{
+			"timeperiod" : "April 2004 - March 2017",
+			"company" : "Montfort School, Delhi",
+			"description" : "Got 9.4 CGPA in 10th class and 93.8% marks in the AISSCE examinations"
+		},
+		{
+			"timeperiod" : "July 2017 - Present",
+			"company" : "Manipal Institute of Technology, Manipal",
+			"description" : "Current CGPA (6 semesters): 7.95"
+		}
+	]
+}
