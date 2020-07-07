@@ -33,7 +33,7 @@ function scrollTo(target) {
 $(document).ready(function() {
   var elements = $(".sidebar > .main-info *");
 
-  console.log(elements);
+  // console.log(elements);
 
   for (let i = 0; i < elements.length; i++) {
     setTimeout(function() {

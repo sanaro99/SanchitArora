@@ -2,6 +2,9 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+body {
+  overflow-x: hidden;
+}
 a:hover {
   text-decoration: none;
 }
@@ -12,7 +15,7 @@ a:hover {
   right: 552px;
   bottom: 0px;
   z-index: 1;
-  width: 32%;
+  width: 30%;
   height: 100%;
 }
 .sidebar .main-info * {
@@ -32,16 +35,15 @@ a:hover {
 .main-content {
   position: relative;
   overflow: visible;
-  overflow-x: hidden;
   width: 70%;
   max-width: 1200px;
   margin-left: 30%;
   float: none;
-  clear: none;
+  clear: both;
 }
 
 .main-content:after {
-  /* position: absolute; */
+  position: absolute;
   content: '';
   top: 0;
   bottom: 0;
@@ -49,7 +51,8 @@ a:hover {
   right: 0;
   -webkit-transition: all 0.8s cubic-bezier(0.79, 0, 0.05, 0.83);
   transition: all 0.8s cubic-bezier(0.79, 0, 0.05, 0.83);
-  background-color: #fff;
+  background-color: #FFF;
+  clear: both;
 }
 
 .main-content.active:after {
