@@ -32,6 +32,7 @@ a:hover {
 .main-content {
   position: relative;
   overflow: visible;
+  overflow-x: hidden;
   width: 70%;
   max-width: 1200px;
   margin-left: 30%;
@@ -40,7 +41,7 @@ a:hover {
 }
 
 .main-content:after {
-  position: absolute;
+  /* position: absolute; */
   content: '';
   top: 0;
   bottom: 0;

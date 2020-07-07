@@ -15,6 +15,8 @@
 		"Snowflake" : "30",
 		"VC#" : "50",
 		"Hugo" : "40",
-		"BootStrap" : "70"
+		"BootStrap" : "70",
+		"Pandas" : "70",
+		"Keras" : "60"
 	}
 }
