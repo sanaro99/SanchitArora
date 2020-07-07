@@ -2,14 +2,48 @@
 	"title" : "Projects",
 	"services" : [
 		{
-			"icon" : "pencil-ruler",
-			"title" : "Hacker Newspaper",
-			"description" : "Nunc sapien nisi, maximus eleifend hendrerit sit amet, rutrum vel diam. Duis quam nibh, tincidunt eget nunc nec, suscipit pretium dolor. "
+			"icon" : "fab fa-cloudversify",
+			"title" : "Sky Pixel Detection in outdoor imagery",
+			"description" : "Developed a Convolutional Neural Network which takes input as hundreds of temporal images taken from a fixed perspective and gives an output image with sky 'pixels' in white and other areas in black"
 		},
 		{
-			"icon" : "pen-nib",
-			"title" : "Android App Development",
-			"description" : "Nunc sapien nisi, maximus eleifend hendrerit sit amet, rutrum vel diam. Duis quam nibh, tincidunt eget nunc nec, suscipit pretium dolor. "
+			"icon" : "fa fa-hand-holding-heart",
+			"title" : "India Young Foundation WebDev",
+			"website" : "https://indiayoungfoundation.org",
+			"description" : "Developed the website for India Young Foundation using Django framework and PostgreSQL with functionalities such as Mailing System and Payment (Paytm API)"
+		},
+		{
+			"icon" : "far fa-newspaper",
+			"title" : "Hacker Newspaper",
+			"website" : "https://hackernewspaper.netlify.com",
+			"description" : "Hacker News 'Ask HN' with newspaper UI developed using ReactJS, NodeJS and Hacker News API"
+		},
+		{
+			"icon" : "fas fa-shield-virus",
+			"title" : "Delhi's Guardians WebDev",
+			"website" : "https://delhisguardians.com",
+			"description" : "Developed using Wix with functionalities such as automatic mailing system, booking system and Instragram integration"
+		},
+		{
+			"icon" : "fab fa-android",
+			"title" : "Spielen Android App",
+			"description" : "Developed with Android Studio and Java. Spielen is a platform for sports enthusiasts to connect and play sports together"
+		},
+		{
+			"icon" : "fas fa-clipboard-list",
+			"title" : "Atal Innovation Mission WebDev",
+			"description" : "Developed a complex online application form with PHP for the 'Mentor of Change' program during my internship at NITI Aayog"
+		},
+		{
+			"icon" : "fas fa-meteor",
+			"title" : "Astronomy Club WebDev",
+			"website" : "https://astromanipal.org",
+			"description" : "Developed using PHP and PostgreSQL"
+		},
+		{
+			"icon" : "fas fa-book",
+			"title" : "Library Management System",
+			"description" : "Developed using Python, Tkinter and MySQLite"
 		}
 	]
 }

@@ -9,8 +9,15 @@
 
     <div class="col-12 col-lg-6 col-md-6 mb-3">
       <div class="card p-4">
-        <i class="mt-3  fa fa-{{ $element.icon }} fa-3x"></i>
+        <i class="mt-3  {{ $element.icon }} fa-3x"></i>
         <h5 class="mt-4">{{ $element.title }}</h5>
+        {{ $website := $element.website }}
+        {{ if $website }}
+        <a target="_blank" href="{{ $website }}">
+          <i class="fas fa-link"></i>
+          {{ $website }}
+        </a>
+        {{ end }}
         <p class="text-muted">{{ $element.description }}</p>
       </div>
     </div>

@@ -4,16 +4,17 @@
 		"Django" : "85",
 		"Flask" : "45",
 		"C++" : "80",
-		"Python" : "70",
+		"Python" : "75",
 		"ReactJS" : "40",
 		"VueJS" : "20",
-		"HTML" : "100",
-		"CSS" : "100",
-		"JavaScript" : "95",
+		"HTML/CSS/JS" : "95",
 		"PHP" : "70",
 		"Android Studio" : "90",
 		"Java" : "60",
 		"MATLAB" : "50",
-		"Snowflake" : "30"
+		"Snowflake" : "30",
+		"VC#" : "50",
+		"Hugo" : "40",
+		"BootStrap" : "70"
 	}
 }
