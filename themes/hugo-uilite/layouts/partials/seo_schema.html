@@ -1,14 +1,15 @@
+<meta name="robots" content="index, follow">
 <!-- Schema.org for Google -->
 <meta itemprop="name" content="{{ .Title }}">
-<meta itemprop="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
+<meta itemprop="description" content="{{ .Site.Data.config.description }}">
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
 <meta name="og:title" content="{{ .Title }}">
-<meta name="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
+<meta name="og:description" content="{{ .Site.Data.config.description }}">
 <meta name="og:type" content="article">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}">
+<meta name="twitter:description" content="{{ .Site.Data.config.description }}">
 <!-- Open Graph - Article -->
 <meta name="article:author" content="{{ .Site.Data.config.author }}">
 
