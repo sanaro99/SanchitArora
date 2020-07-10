@@ -13,7 +13,7 @@
         <h5 class="mt-4">{{ $element.title }}</h5>
         {{ $website := $element.website }}
         {{ if $website }}
-        <a target="_blank" href="{{ $website }}">
+        <a target="_blank" href="{{ $website }}" rel="noopener noreferrer">
           <i class="fas fa-link"></i>
           {{ $website }}
         </a>

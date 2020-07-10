@@ -50,4 +50,5 @@ $(document).ready(function() {
 
     scrollTo($.attr(this, "href"));
   });
+  
 });

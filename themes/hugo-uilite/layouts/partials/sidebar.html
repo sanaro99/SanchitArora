@@ -13,13 +13,13 @@
     <div class="social my-4">
 
       {{ range $key, $value := $social }}
-        <a target="_blank" href="{{ $value }}" rel="me">
+        <a target="_blank" href="{{ $value }}" rel="me noopener noreferrer">
           <i class="fab fa-{{ $key }}"></i>
         </a>
       {{ end }}
 
       {{ range $key, $value := $socialfas }}
-        <a target="_blank" href="{{ $value }}">
+        <a target="_blank" href="{{ $value }}" rel="noopener noreferrer">
           <i class="fas fa-{{ $key }}"></i>
         </a>
       {{ end }}
