@@ -5,12 +5,14 @@
 html {
   overflow-x: hidden;
   overflow-y: scroll;
+  cursor: url('../images/cursor.png') 15 15, default;
 }
 body {
   overflow-x: hidden;
 }
 a:hover {
   text-decoration: none;
+  cursor: url('../images/cursor.png') 15 15, default;
 }
 .sidebar {
   position: fixed;
