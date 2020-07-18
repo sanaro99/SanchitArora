@@ -14,7 +14,7 @@
 <meta name="article:author" content="{{ .Site.Data.config.author }}">
 
 <!-- JSON-LD -->
-{{ if .IsHome }}
+<!-- {{ if .IsHome }}
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -55,4 +55,4 @@
     "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }} {{with .Site.Title}}"{{ .}}"{{ end }}]
 }
 </script>
-{{ end }}
+{{ end }} -->
