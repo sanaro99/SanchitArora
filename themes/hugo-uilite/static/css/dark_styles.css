@@ -1,10 +1,10 @@
 html {
-	background-color: #171717 !important;
+	background-color: #000000 !important;
   }
   
   html {
-	filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
-	-webkit-filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(85%);
+	filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(105%);
+	-webkit-filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(105%);
   }
   
   body {
