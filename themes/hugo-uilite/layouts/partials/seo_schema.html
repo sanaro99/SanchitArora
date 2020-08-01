@@ -14,7 +14,6 @@
 <meta name="article:author" content="{{ .Site.Data.config.author }}">
 
 <!-- JSON-LD -->
-<!-- {{ if .IsHome }}
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -25,10 +24,10 @@
         "@type": "Person",
         "name": "{{ .Site.Data.config.author }}"
     },
-    "description": "{{ .Site.Data.config.description }}",
+    "description": "{{ .Site.Data.config.description }}"
 }
 </script>
-{{ end }} 
+<!-- 
 {{ if .IsPage }}
 <script type="application/ld+json">
  "@context" : "http://schema.org",
