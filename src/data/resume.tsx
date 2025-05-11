@@ -171,6 +171,7 @@ export const DATA = {
         },
       ],
       image: "/mask_detector.gif",
+      video: undefined,
     },
     {
       title: "Hacker NewsPaper",
@@ -192,6 +193,7 @@ export const DATA = {
         },
       ],
       image: "/hackernewspaper.png",
+      video: undefined,
     },
     {
       title: "Sky Pixel detection in outdoor imagery",
@@ -213,25 +215,30 @@ export const DATA = {
         },
       ],
       image: "/skypixel.jpg",
-    },
+      video: undefined,
+    }
   ],
   achievements: [
     {
       title: "Quarterly Star Award",
       date: "April 2023",
       description: "Recognised with the Quarterly Star Award for exceptional contributions to UBS in the first quarter of 2023.",
-      image: "/achievements/star-award.png"
+      image: "/achievements/star-award.png",
+      video: undefined,
     },
     {
       title: "Engineering Excellence Award",
       date: "August 2022",
       description: "Awarded with Engineering Excellence for being among the top performers completing a year of full‑time employment at UBS.",
-      image: "/achievements/excellence-award.png"
+      image: "/achievements/excellence-award.png",
+      video: undefined,
     },
     {
       title: "Appreciation through Kudos",
+      date: "",
       description: "Accrued appreciation through the Kudos platform from stakeholders and peers at UBS.",
-      image: "/achievements/kudos.png"
+      image: "/achievements/kudos.png",
+      video: undefined,
     }
   ],
 

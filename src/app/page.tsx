@@ -137,7 +137,7 @@ export default function Page() {
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 14 + id * 0.5}
+                delay={BLUR_FADE_DELAY * 14 + id * 0.07}
               >
                 <ProjectCard
                   href={project.href}
@@ -176,7 +176,7 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-col gap-y-3 max-w-2xl mx-auto mt-6">
             {DATA.courses && DATA.courses.map((course, id) => (
-              <BlurFade key={course.name + course.date} delay={BLUR_FADE_DELAY * 15.1 + id * 0.05}>
+              <BlurFade key={course.name + course.date} delay={BLUR_FADE_DELAY * 15.1 + id * 0.07}>
                 <CourseCard {...course} />
               </BlurFade>
             ))}
@@ -203,7 +203,7 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-col gap-y-3 max-w-2xl mx-auto mt-6">
             {DATA.achievements && DATA.achievements.map((achievement, id) => (
-              <BlurFade key={achievement.title + (achievement.date || id)} delay={BLUR_FADE_DELAY * 16.1 + id * 0.05}>
+              <BlurFade key={achievement.title + (achievement.date || id)} delay={BLUR_FADE_DELAY * 16.1 + id * 0.07}>
                 <AchievementCard {...achievement} />
               </BlurFade>
             ))}
