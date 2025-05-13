@@ -233,13 +233,13 @@ export const DATA = {
       image: "/achievements/excellence-award.png",
       video: undefined,
     },
-    {
-      title: "Appreciation through Kudos",
-      date: "",
-      description: "Accrued appreciation through the Kudos platform from stakeholders and peers at UBS.",
-      image: "/achievements/kudos.png",
-      video: undefined,
-    }
+    // {
+    //   title: "Appreciation through Kudos",
+    //   date: "",
+    //   description: "Accrued appreciation through the Kudos platform from stakeholders and peers at UBS.",
+    //   image: "/achievements/kudos.png",
+    //   video: undefined,
+    // }
   ],
 
   // Online courses section
