@@ -1,14 +1,16 @@
 ---
-title: "My Self-Hosting Journey: From Google Photos to a Cross-Platform Private Cloud"
+title: "Building My Private Cloud: A TrueNAS Self-Hosting Journey"
 publishedAt: "2025-05-13"
-summary: "TrueNAS home server using old laptop — Discover how I repurposed an old laptop into a feature-rich NAS with ZFS, Immich, backups, and a Windows VM, all under 500 USD"
+summary: "Learn how I built a full-featured TrueNAS home server using an old laptop, supporting cross-platform backups, photo hosting with Immich, virtual machines, and network redundancy—all under $500. A practical self-hosting guide for reclaiming control over your data."
 ---
 
-![My TrueNAS Setup](/truenas-setup.jpg)
+![My TrueNAS Setup](/blog_self-hosting/truenas-setup.jpg)
 
 ## Why I Started
 
-For years, my family and I relied on Google Photos, eventually upgrading to Google One to meet our growing storage needs. But even with the expanded plans, storage always felt limited—and expensive. I wanted a long-term solution: something secure, scalable, and personal. That’s what led me down the rabbit hole of self-hosting.
+For years, my family and I relied on Google Photos, eventually upgrading to Google One to meet our growing storage needs. But even with the expanded plans, storage always felt limited and expensive. I wanted a long-term solution: something secure, scalable, and personal. That’s what led me down the rabbit hole of self-hosting.
+
+A shoutout to my friend [Madhav](https://www.linkedin.com/in/maddyb99/) who introduced me to the world of self-hosting and guided me through the setup process.
 
 ---
 
@@ -29,7 +31,10 @@ I repurposed an old laptop as the host machine and built a custom NAS using **Tr
 | **2x 8 TB NAS HDDs**     | Seagate IronWolf, mirrored setup             | ₹16,200 each | \~\$200 each    |
 
 **Image: Disk list and topology overview**
-![Disk Configuration](Screenshot_2025-05-13_225455.png)
+![Disk Configuration](/blog_self-hosting/disk_configuration.png)
+
+**Image: Pool configuration**
+![Pool Configuration](/blog_self-hosting/pool_configuration.png)
 
 ---
 
@@ -37,10 +42,10 @@ I repurposed an old laptop as the host machine and built a custom NAS using **Tr
 
 * **Network Bonding**: Created a bonded interface (`bond007`) combining two NICs. This provides **redundancy and additional bandwidth**, improving reliability and speed.
 * **Storage Redundancy**: The `data-pool` is configured using a **MIRROR VDEV** (RAID1 equivalent), meaning both 8 TB drives contain identical data. If one fails, the other continues.
-* **Future Backup Plan**: I plan to sync data to a friend's remote TrueNAS using **ZFS replication**, creating offsite protection.
+* **Future Backup Plan**: I plan to sync data to a Madhav's remote TrueNAS using **ZFS replication**, creating offsite protection.
 
 **Image: Network bonding configuration**
-![Network Interfaces](Screenshot_2025-05-13_230256.png)
+![Network Interfaces](/blog_self-hosting/network_interfaces.png)
 
 ---
 
@@ -48,18 +53,18 @@ I repurposed an old laptop as the host machine and built a custom NAS using **Tr
 
 Every aspect of access is designed with **user privacy in mind**:
 
-* **SMB (Samba) Shares** are ACL-isolated: each family member has a private space (e.g., `/users/rachit-arora`), with a separate **shared folder** (`/common`) for movies and files.
+* **SMB (Samba) Shares** are ACL-isolated: each family member has a private space (e.g., `/users/sanchit-arora`), with a separate **shared folder** (`/common`) for movies and files.
 * **Audit logging** is enabled across shares.
 * No one sees what they're not supposed to.
 
 **Image: SMB Shares configuration**
-![SMB Shares](Screenshot_2025-05-13_230522.png)
+![SMB Shares](/blog_self-hosting/smb_shares.png)
 
 ---
 
 ## Functionalities: More Than Just Storage
 
-This isn’t just a file dump—it’s a smart, extensible home cloud:
+Self-hosting is more than just a file dump - it is also a smart, extensible home cloud. Here are some of the features I implemented:
 
 ### 1. **Cross-Platform File Access**
 
@@ -71,29 +76,31 @@ Using Samba (SMB), files are seamlessly available across:
 
 ### 2. **Phone Backups**
 
-Using **FolderSync**, our family phones back up photos and files **daily** to their respective SMB shares.
+Using **FolderSync**, our family phones back up photos and files **daily** to their respective datasets in '/backups'.
 
 ### 3. **Personal Google Photos Alternative**
 
-I migrated all albums from Google using `immich-go`. Now we use **Immich**, a beautiful self-hosted media server:
+Now we use **Immich**, a beautiful self-hosted media server:
 
 * Indexes 100K+ photos & videos
 * Allows user-specific accounts
 * Handles albums, face recognition, and timeline views
 
+I migrated all photos, videos, albums from Google using [`immich-go`](https://github.com/immich-app/immich-go). 
+
 **Image: Immich server usage statistics**
-![Immich Usage](Screenshot_2025-05-13_225635.png)
+![Immich Usage](/blog_self-hosting/immich_usage.png)
 
 ### 4. **Windows Virtual Machine**
 
-A lightweight Windows VM (`SanchitCloud`) runs on TrueNAS:
+A lightweight Windows VM runs on TrueNAS:
 
 * 6 GB RAM, 2 cores
-* RDP access
-* Accessible even on phone
+* Accessible even on phone via VNC display on browser
+* Used for quick Office edits and remote desktop access from mobile
 
 **Image: Virtual machine details**
-![VM Configuration](Screenshot_2025-05-13_230841.png)
+![VM Configuration](/blog_self-hosting/vm_configuration.png)
 
 ### 5. **App Hosting**
 
@@ -103,7 +110,7 @@ Running apps like:
 * `tailscale`: remote access from anywhere
 
 **Image: Running applications**
-![Apps Running](Screenshot_2025-05-13_230544.png)
+![Apps Running](/blog_self-hosting/apps_running.png)
 
 ### 6. **Monitoring & Protection**
 
@@ -113,13 +120,13 @@ Running apps like:
 * ZFS snapshots planned
 
 **Image: System overview dashboard**
-![System Monitoring](Screenshot_2025-05-13_225711.png)
+![System Monitoring](/blog_self-hosting/system_monitoring.png)
 
 ---
 
 ## Graceful Shutdowns
 
-While my UPS doesn’t have network monitoring, it gives a 15-minute buffer. I plan to use the **laptop’s mic** to detect the UPS beep and trigger an automatic shutdown.
+While my UPS doesn’t support network monitoring, it gives a ~15-minute backup buffer. I plan to use a lightweight Linux script that listens through the laptop’s microphone for the characteristic beep sound of the UPS. Once detected, the script will safely shut down all services and power off the system to prevent data corruption. This workaround is especially useful for non-smart UPS units and makes use of the laptop’s built-in hardware.
 
 ---
 
@@ -134,7 +141,7 @@ This setup is just the beginning:
   * *Jellyfin* or *Plex* for media streaming
 
 **Image: Dataset structure overview**
-![Datasets](Screenshot_2025-05-14_004739.png)
+![Datasets](/blog_self-hosting/datasets.png)
 
 ---
 
@@ -143,3 +150,5 @@ This setup is just the beginning:
 Self-hosting isn’t just about saving money—it’s about owning your data, understanding your digital infrastructure, and building a cloud on your terms. From cross-platform file access to automated backups and virtual machines, this setup powers our digital lives—without relying on big tech.
 
 And it’s just getting started.
+
+---
