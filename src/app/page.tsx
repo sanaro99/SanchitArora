@@ -126,9 +126,7 @@ export default function Page() {
                   Check out my projects
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                  From real-time machine learning apps and self-hosted cloud solutions to mobile tools and innovative web platforms, my projects reflect a passion for solving real-world problems with technology. Here are some highlights that showcase my experience in full-stack development, automation, and creative engineering.
                 </p>
               </div>
             </div>
@@ -196,7 +194,7 @@ export default function Page() {
                   Recognized for Excellence
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Throughout my career, I have been recognized for my dedication to engineering excellence, operational stability, and impactful contributions at UBS. My achievements reflect a commitment to delivering results, driving automation, and fostering a culture of collaboration and appreciation. Here are some highlights of my journey so far.
+                  Throughout my career, I’ve built a reputation for engineering excellence, operational resilience, and delivering measurable impact-particularly at UBS. My work is driven by automation, collaboration, and a relentless focus on results. Below are some key milestones.
                 </p>
               </div>
             </div>

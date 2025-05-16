@@ -10,14 +10,20 @@ export const DATA = {
   description:
     "SRE-II at UBS Investment Bank",
   summary:
-    "I am a skilled Software Development Engineer and Site Reliability Engineer with expertise in Python, Unix, ReactJS, SQL, and various other technologies. Currently working at UBS Investment Bank, I have a strong background in developing efficient solutions and have made significant contributions in automation and operational stability. With experience in both frontend and backend technologies, I am adept at creating robust applications and improving workflow efficiency.",
+    "I am a skilled Software Developer and Site Reliability Engineer with expertise in Python, Unix, ReactJS, SQL, and various other technologies. Currently working at UBS Investment Bank, I have a strong background in developing efficient solutions and have made significant contributions in automation and operational stability. With experience in both frontend and backend technologies, I am adept at creating robust applications and improving workflow efficiency.",
   avatarUrl: "/me.png",
   skills: [
-    "React",
+    "Git",
+    "Python",
+    "Unix",
+    "SQL",
+    "Splunk",
+    "AppDynamics",
+    "BigPanda",
+    "Amelia",
     "Next.js",
     "Typescript",
     "Node.js",
-    "Python",
     "Postgres",
     "Docker",
     "Kubernetes",
@@ -33,7 +39,6 @@ export const DATA = {
     "HTML/CSS",
     "ReactJS",
     "Snowflake",
-    "Git",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -150,6 +155,57 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Fantasy Cricket",
+      href: "/fantasy-cricket-login.png",
+      dates: "April - May 2025",
+      active: true,
+      description:
+        "Fantasy Cricket web app built with Next.js, Tailwind CSS, and Supabase. Features OAuth & email login, match/player selection, and leaderboards. Currently supports IPL, with extensibility for other leagues.",
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "Supabase",
+        "OAuth"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sanaro99/fantasy-cricket",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Live",
+          href: "https://fantasy-cricket-silk.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/fantasy-cricket-login.png",
+      video: undefined,
+    },
+    {
+      title: "Personal NAS with TrueNAS SCALE",
+      href: "/trueNAS.png",
+      dates: "May 2025",
+      active: true,
+      description:
+        "Built a self-hosted NAS using an old laptop and TrueNAS SCALE for private cloud storage, daily phone backups, photo hosting, virtual machines, and remote access.",
+      technologies: [
+        "TrueNAS SCALE",
+        "ZFS",
+        "SMB (Samba)",
+        "Linux Scripting",
+      ],
+      links: [
+        {
+          type: "Blog",
+          href: "/blog/self-hosting",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/trueNAS.png",
+      video: undefined,
+    },
+    {
       title: "Mask Detector",
       href: "/mask_detector.gif",
       dates: "Jan 2021",
@@ -198,7 +254,7 @@ export const DATA = {
     {
       title: "Sky Pixel detection in outdoor imagery",
       href: "/skypixel.jpg",
-      dates: "April 2023 - September 2023",
+      dates: "January 2020",
       active: true,
       description:
         "Developed a neural network model using PSPNet and TensorFlow to segment sky pixels in images for enhanced outdoor image analysis.",
@@ -215,6 +271,70 @@ export const DATA = {
         },
       ],
       image: "/skypixel.jpg",
+      video: undefined,
+    },
+    {
+      title: "Spielen Android app – Find & Play Sports Nearby",
+      href: "/spielen.png",
+      dates: "March - June 2020",
+      active: true,
+      description:
+        "Spielen is an Android app that helps users find, host, and join local sports events with features like map-based location, event reminders, and direct contact with hosts.",
+      technologies: [
+        "Java",
+        "Android Studio",
+        "Firebase",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/rahul0101/Spielen",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/spielen.png",
+      video: undefined,
+    },
+    {
+      title: "Predicting Star/Galaxy/Quasar using NN",
+      href: "/sdss_nn.png",
+      dates: "January 2019",
+      active: true,
+      description:
+        "Developed a neural network model in TensorFlow and Keras for classifying a given set of parameters into stars, galaxies, and quasars, with a Tkinter GUI",
+      technologies: [
+        "TensorFlow",
+        "Keras",
+        "Tkinter",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sanaro99/SDSS_NN",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/sdss_nn.png",
+      video: undefined,
+    },
+    {
+      title: "Snake game on terminal",
+      href: "/snake.gif",
+      dates: "May 2015",
+      active: true,
+      description:
+        "A simple Snake game implemented in C++ using 'time' and 'windows' libraries",
+      technologies: [
+        "C++",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sanaro99/Snake_cpp",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/snake.gif",
       video: undefined,
     }
   ],
@@ -244,6 +364,12 @@ export const DATA = {
 
   // Online courses section
   courses: [
+    {
+      name: "Azure AI Fundamentals",
+      url: "https://learn.microsoft.com/api/credentials/share/en-us/sanchitarora/555364719FD9C893?sharingId=CC2941D544480702",
+      date: "November 2024",
+      image: "/courses/azure-ai.png"
+    },
     {
       name: "Introduction to Microsoft Azure Cloud Services",
       url: "https://coursera.org/share/402506801b6b14edf95a51a7b0dc701a",
