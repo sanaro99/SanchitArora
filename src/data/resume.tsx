@@ -156,7 +156,7 @@ export const DATA = {
   projects: [
     {
       title: "Fantasy Cricket",
-      href: "/fantasy-cricket-login.png",
+      href: "/projects/fantasy-cricket-login.png",
       dates: "April - May 2025",
       active: true,
       description:
@@ -179,12 +179,12 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         }
       ],
-      image: "/fantasy-cricket-login.png",
+      image: "/projects/fantasy-cricket-login.png",
       video: undefined,
     },
     {
       title: "Personal NAS with TrueNAS SCALE",
-      href: "/trueNAS.png",
+      href: "/projects/trueNAS.png",
       dates: "May 2025",
       active: true,
       description:
@@ -202,12 +202,12 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/trueNAS.png",
+      image: "/projects/trueNAS.png",
       video: undefined,
     },
     {
       title: "Mask Detector",
-      href: "/mask_detector.gif",
+      href: "/projects/mask_detector.gif",
       dates: "Jan 2021",
       active: true,
       description:
@@ -226,12 +226,12 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/mask_detector.gif",
+      image: "/projects/mask_detector.gif",
       video: undefined,
     },
     {
       title: "Hacker NewsPaper",
-      href: "/hackernewspaper.png",
+      href: "/projects/hackernewspaper.png",
       dates: "May 2020",
       active: true,
       description:
@@ -248,12 +248,12 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/hackernewspaper.png",
+      image: "/projects/hackernewspaper.png",
       video: undefined,
     },
     {
       title: "Sky Pixel detection in outdoor imagery",
-      href: "/skypixel.jpg",
+      href: "/projects/skypixel.jpg",
       dates: "January 2020",
       active: true,
       description:
@@ -270,12 +270,12 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/skypixel.jpg",
+      image: "/projects/skypixel.jpg",
       video: undefined,
     },
     {
       title: "Spielen Android app – Find & Play Sports Nearby",
-      href: "/spielen.png",
+      href: "/projects/spielen.png",
       dates: "March - June 2020",
       active: true,
       description:
@@ -292,12 +292,12 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/spielen.png",
+      image: "/projects/spielen.png",
       video: undefined,
     },
     {
       title: "Predicting Star/Galaxy/Quasar using NN",
-      href: "/sdss_nn.png",
+      href: "/projects/sdss_nn.png",
       dates: "January 2019",
       active: true,
       description:
@@ -314,12 +314,12 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/sdss_nn.png",
+      image: "/projects/sdss_nn.png",
       video: undefined,
     },
     {
       title: "Snake game on terminal",
-      href: "/snake.gif",
+      href: "/projects/snake.gif",
       dates: "May 2015",
       active: true,
       description:
@@ -334,7 +334,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/snake.gif",
+      image: "/projects/snake.gif",
       video: undefined,
     }
   ],
@@ -365,34 +365,53 @@ export const DATA = {
   // Online courses section
   courses: [
     {
-      name: "Azure AI Fundamentals",
+      name: "Azure AI Fundamentals (AI-900)",
       url: "https://learn.microsoft.com/api/credentials/share/en-us/sanchitarora/555364719FD9C893?sharingId=CC2941D544480702",
       date: "November 2024",
-      image: "/courses/azure-ai.png"
+      image: "/courses/azure-ai.png",
+      issued_by: "Microsoft",
+    },
+    {
+      name: "Amelia AIOps Platform Fundamentals",
+      url: "/courses/amelia.png",
+      date: "October 2024",
+      image: "/courses/amelia.png",
+      issued_by: "Amelia",
+    },
+    {
+      name: "Certified BigPanda Operator",
+      url: "https://www.credly.com/badges/d150ac16-af32-4cb2-a10d-e1ee7f0f0f8e",
+      date: "October 2024",
+      image: "/courses/bigpanda.png",
+      issued_by: "BigPanda",
     },
     {
       name: "Introduction to Microsoft Azure Cloud Services",
       url: "https://coursera.org/share/402506801b6b14edf95a51a7b0dc701a",
       date: "December 2022",
-      image: "/courses/azure-cloud.png"
+      image: "/courses/azure-cloud.png",
+      issued_by: "Coursera",
     },
     {
-      name: "Responsive Web Design by University of London",
+      name: "Responsive Web Design",
       url: "https://coursera.org/share/a7a7410a98aff11fa108269c60cd4ad6",
       date: "June 2019",
-      image: "/courses/web-design.png"
+      image: "/courses/web-design.png",
+      issued_by: "University of London",
     },
     {
-      name: "Neural Networks & Deep Learning by deeplearning.ai",
+      name: "Neural Networks & Deep Learning",
       url: "https://coursera.org/share/e1fad2a7801809937bb2ed85098a4ff5",
       date: "January 2019",
-      image: "/courses/nn-dl.png"
+      image: "/courses/nn-dl.png",
+      issued_by: "deeplearning.ai",
     },
     {
-      name: "Technical Support Fundamentals by Google",
+      name: "Technical Support Fundamentals",
       url: "https://coursera.org/share/cb16d6445e2aa1154a4d92ae600f9eff",
       date: "June 2018",
-      image: "/courses/tech-support.png"
+      image: "/courses/tech-support.png",
+      issued_by: "Google",
     }
   ],
 
