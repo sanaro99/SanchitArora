@@ -8,13 +8,17 @@ export const DATA = {
   location: "Delhi, India",
   locationLink: "https://www.google.com/maps/place/delhi",
   description:
-    "SRE-II at UBS Investment Bank",
+    "Software Engineer at UBS Investment Bank",
   summary:
-    "I am a skilled Software Developer and Site Reliability Engineer with expertise in Python, Unix, ReactJS, SQL, and various other technologies. Currently working at UBS Investment Bank, I have a strong background in developing efficient solutions and have made significant contributions in automation and operational stability. With experience in both frontend and backend technologies, I am adept at creating robust applications and improving workflow efficiency.",
+    "I bring a strong mix of full-stack development and AI skills, focused on solving real problems with clean, reliable solutions. From LLM-powered tools to intelligent automation, my work is driven by clarity, speed, and impact: reducing manual effort, simplifying complexity, and enhancing system reliability.",
   avatarUrl: "/me.png",
   skills: [
+    "Artificial Intelligence",
+    "React",
+    "Flask",
     "Git",
     "Python",
+    "Azure",
     "Unix",
     "SQL",
     "Splunk",
@@ -23,18 +27,19 @@ export const DATA = {
     "Amelia",
     "Next.js",
     "Typescript",
-    "Node.js",
+    "Node.js",  
     "Postgres",
     "Docker",
     "Kubernetes",
     "Java",
     "C++",
+    "Big Data",
     "Android Studio",
+    "Machine Learning",
     "Django",
     "Keras",
     "Pandas",
     "TensorFlow",
-    "Flask",
     "MATLAB",
     "HTML/CSS",
     "ReactJS",
@@ -353,13 +358,6 @@ export const DATA = {
       image: "/achievements/excellence-award.png",
       video: undefined,
     },
-    // {
-    //   title: "Appreciation through Kudos",
-    //   date: "",
-    //   description: "Accrued appreciation through the Kudos platform from stakeholders and peers at UBS.",
-    //   image: "/achievements/kudos.png",
-    //   video: undefined,
-    // }
   ],
 
   // Online courses section
@@ -414,38 +412,4 @@ export const DATA = {
       issued_by: "Google",
     }
   ],
-
-  //   {
-  //     title: "Terrible Hacks V",
-  //     dates: "November 26th, 2016",
-  //     location: "Waterloo, Ontario",
-  //     description:
-  //       "Developed a mock of Windows 11 with interesting notifications and functionality",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     title: "Portal Hackathon",
-  //     dates: "October 29, 2016",
-  //     location: "Kingston, Ontario",
-  //     description:
-  //       "Developed an internal widget for uploading assignments using Waterloo's portal app",
-  //     image:
-  //       "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png",
-  //     links: [
-  //       {
-  //         title: "Source",
-  //         icon: <Icons.github className="h-4 w-4" />,
-  //         href: "https://github.com/UWPortalSDK/crowmark",
-  //       },
-  //     ],
-  //   },
-  // ],
 } as const;

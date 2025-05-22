@@ -43,10 +43,10 @@ export default function Page() {
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-2xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert text-lg">
             {DATA.summary}
           </Markdown>
         </BlurFade>
@@ -120,12 +120,12 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  Projects
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter">
                   Check out my projects
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground text-base/relaxed">
                   From real-time machine learning apps and self-hosted cloud solutions to mobile tools and innovative web platforms, my projects reflect a passion for solving real-world problems with technology. Here are some highlights that showcase my experience in full-stack development, automation, and creative engineering.
                 </p>
               </div>
@@ -163,10 +163,10 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Online Courses
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter">
                   Lifelong Learning & Upskilling
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground text-base/relaxed">
                   I am passionate about continuous learning and have completed several online courses to expand my technical expertise and stay current in the fast-evolving tech landscape. Here are some of the certifications and courses that have helped me grow as an engineer.
                 </p>
               </div>
@@ -190,10 +190,10 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Achievements
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter">
                   Recognized for Excellence
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground text-base/relaxed">
                   Throughout my career, I’ve built a reputation for engineering excellence, operational resilience, and delivering measurable impact-particularly at UBS. My work is driven by automation, collaboration, and a relentless focus on results. Below are some key milestones.
                 </p>
               </div>
