@@ -5,7 +5,7 @@ export const DATA = {
   name: "Sanchit Arora",
   initials: "SA",
   url: "https://sanchitarora.in",
-  location: "Delhi, India",
+  location: "Pune, India",
   locationLink: "https://www.google.com/maps/place/delhi",
   description:
     "Software Engineer at UBS Investment Bank",
@@ -88,24 +88,26 @@ export const DATA = {
     {
       company: "UBS Investment Bank",
       href: "https://www.ubs.com",
-      badges: [],
+      badges: ["AI", "Automation", "Azure", "Python", "Unix", "SQL", "Splunk", "Git", "AppDynamics", "BigPanda", "Amelia", "Docker", "Kubernetes","ReactJS"],
       location: "Pune, India",
       title: "Tech Site Reliability Engineer - II",
       logoUrl: "/ubs.png",
       start: "July 2021",
       end: "Present",
       description:
-      `• Proactively resolve critical production issues and drive operational stability through automation and tool development<br />
-      • Engineered internal web tools using ReactJS, Python (Flask), and SQL, reducing manual effort by \~80 hours/month<br />
-      • Built a huddle management app that decreased meeting frequency by 30% and improved tracking of open issues<br />
-      • Developed a telemetry tool to streamline data aggregation and app health monitoring, cutting detection time by 70%<br />
-      • Enhanced observability by building dashboards and alerts in Splunk and AppDynamics, boosting incident response efficiency by 50%<br />
-      • Tech Stack: ReactJS, NodeJS, Python (Flask), SQL, Azure, Unix, Autosys, Automation Anywhere
+      `• Progressed through three roles: Graduate Trainee → Executive Employee → Authorized Officer, reflecting consistent high performance<br />
+      • Designed an AI-powered assistant web app integrating LLMs for SQL generation, knowledge base search, and query resolution<br />
+      • Built a Teams chatbot developed during a hackathon, integrating internal automation and health status tools to boost operational efficiency<br />
+      • Automated resolution of production incidents and routine requests, saving over 80 hours per month in manual effort<br />
+      • Created a digital huddle tool to track open issues and deliverables, cutting meeting frequency by 30% and enhancing team alignment<br />
+      • Developed 'IB Telemetry' to aggregate and sequence system data from multiple sources, improving visibility and accelerating incident triage<br />
+      • Implemented observability dashboards using Splunk and AppDynamics, enabling proactive alerting and reducing incident turnaround times<br />
+      • Tech stack: Python, Flask, API, React, AI, Unix, SQL, Azure, Automation
       `,
     },
     {
       company: "UBS Group Functions",
-      badges: [],
+      badges: ["ARIS", "Process modelling", "SWIFT"],
       href: "https://www.ubs.com",
       location: "Pune, India",
       title: "Group Technology Intern",
@@ -118,7 +120,7 @@ export const DATA = {
     {
       company: "India Young Foundation",
       href: "https://indiayoungfoundation.org/",
-      badges: [],
+      badges: ["Django", "HTML/CSS", "JavaScript", "SQLite", "Bootstrap", "Stripe API"],
       location: "Pune, India",
       title: "Web Developer",
       logoUrl: "/iyf.png",
@@ -130,7 +132,7 @@ export const DATA = {
     {
       company: "NITI Aayog",
       href: "https://aim.gov.in/",
-      badges: [],
+      badges: ["JavaScript", "PHP", "MySQL", "Bootstrap", "Flutter", "Firebase", "Security Fixes", "Bug Fixes"],
       location: "Delhi, India",
       title: "Science and Technology Intern",
       logoUrl: "/aim.jpg",
@@ -148,6 +150,11 @@ export const DATA = {
       logoUrl: "/manipal.png",
       start: "2017",
       end: "2021",
+      description:
+        `• CGPA: 8.26<br />
+        • <b>Minor in Big Data</b>, Other courses: Machine Learning, Business Intelligence, Data Analytics, Data Warehousing, Pattern Recognition<br />
+        • <b>Technical Head - The Astronomy Club</b>: Led the Data Science Project, the Optical Telescope Project, and the Star Tracker Project
+        `,
     },
     // {
     //   school: "Montfort School",
@@ -161,7 +168,7 @@ export const DATA = {
   projects: [
     {
       title: "Fantasy Cricket",
-      href: "/projects/fantasy-cricket-login.png",
+      href: "/projects/fantasy-cricket.png",
       dates: "April - May 2025",
       active: true,
       description:
@@ -184,7 +191,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         }
       ],
-      image: "/projects/fantasy-cricket-login.png",
+      image: "/projects/fantasy-cricket.png",
       video: undefined,
     },
     {
@@ -216,7 +223,7 @@ export const DATA = {
       dates: "Jan 2021",
       active: true,
       description:
-        "Real‑time facial mask detection model using Haar Cascade classifiers to verify correct mask usage.",
+        "Real-time facial mask detection model using Haar Cascade classifiers to verify correct mask usage.",
       technologies: [
         "Python",
         "OpenCV",
@@ -240,7 +247,7 @@ export const DATA = {
       dates: "May 2020",
       active: true,
       description:
-        "Hacker News' Ask HN column in a Newspaper‑style UI using ReactJS, NodeJS, and Hacker News API.",
+        "Hacker News' Ask HN column in a Newspaper-style UI using ReactJS, NodeJS, and Hacker News API.",
       technologies: [
         "ReactJS",
         "NodeJS",
@@ -354,8 +361,8 @@ export const DATA = {
     {
       title: "Engineering Excellence Award",
       date: "August 2022",
-      description: "Awarded with Engineering Excellence for being among the top performers completing a year of full‑time employment at UBS.",
-      image: "/achievements/excellence-award.png",
+      description: "Awarded with Engineering Excellence for being among the top performers completing a year of full-time employment at UBS.",
+      image: "/achievements/excellence-award.jpg",
       video: undefined,
     },
   ],
@@ -389,6 +396,20 @@ export const DATA = {
       date: "December 2022",
       image: "/courses/azure-cloud.png",
       issued_by: "Coursera",
+    },
+    {
+      name: "Machine Learning with Big Data",
+      url: "https://www.coursera.org/account/accomplishments/records/5NLL6SWBPYGQ",
+      date: "April 2020",
+      image: "/courses/machine-learning.png",
+      issued_by: "University of California, San Diego",
+    },
+    {
+      name: "Natural Language Processing in TensorFlow",
+      url: "https://www.coursera.org/account/accomplishments/records/ZVBGAQYQAKJV",
+      date: "November 2020",
+      image: "/courses/nlp.png",
+      issued_by: "deeplearning.ai",
     },
     {
       name: "Responsive Web Design",
