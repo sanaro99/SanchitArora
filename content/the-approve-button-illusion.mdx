@@ -1,0 +1,159 @@
+---
+title: "The Approve Button Illusion: Why Human-in-the-Loop Is Broken"
+publishedAt: "2026-02-24"
+summary: "The current industry answer to the Doing Gap is "human-in-the-loop" — but most implementations reduce this to a single generic approval gesture that is completely divorced from the nature of the task. This post argues that meaningful control must be task-commensurate, not task-agnostic, and that false agency may actually be worse than no agency at all."
+---
+
+*The AI industry's answer to the trust problem is a concept called "human-in-the-loop"
+— keep humans involved at key decision points, and you preserve accountability, safety,
+and confidence. It sounds right. It even feels responsible. But there's a quiet problem
+at the heart of most implementations: the loop isn't really a loop. It's a button.*
+
+> *This is Part 2 of a 3-part series on AI, human nature, and the hidden costs of
+> delegation. [← Part 1: The Doing Gap](/blog/the-doing-gap)*
+
+---
+
+## A Button Is Not a Decision
+
+Picture two scenarios.
+
+In the first, an AI agent has written and tested a piece of authentication code for your
+application. It has modified session handling, adjusted token expiry logic, and updated
+three interdependent modules. Before deploying, it surfaces a summary screen: "Changes
+made to auth flow. Review complete. Ready to merge." There is one button: **Approve**.
+
+In the second, an AI assistant has drafted your weekly grocery order based on your past
+purchases. Oat milk, eggs, sourdough, the usual. It asks: "Confirm your order?" There
+is one button: **Approve**.
+
+The button looks identical. The gesture is identical. The cognitive effort required is
+identical. But the stakes, the domain knowledge required, and the potential consequences
+are entirely different. One approval might ship a security vulnerability to production.
+The other might mean you get semi-skimmed instead of oat milk.
+
+This is the Approve Button Illusion: **the flattening of all human oversight into a
+single, task-agnostic interaction that feels like control but provides almost none of
+it.**
+
+---
+
+## Why "Review the Summary" Isn't Enough
+
+The standard defense is: "But the human reviewed the summary before approving." And
+technically, yes. But this argument collapses under any real scrutiny.
+
+Reading a summary of changes to a complex system is not the same as understanding the
+changes. A one-paragraph description of modified authentication logic doesn't tell you
+whether the session token is now vulnerable to replay attacks. A clean diff view of
+three interdependent modules doesn't automatically surface what breaks in a fourth module
+that wasn't touched but relied on the old behavior.
+
+Genuine understanding of a technical change requires engaging with it at the level of
+the change — reading the code, reasoning about edge cases, mentally simulating failure
+modes. A summary screen before an Approve button replaces that engagement with an
+*impression* of engagement. You feel like you checked. You didn't really check.
+
+Worse, this creates a specific kind of false confidence that may be more dangerous than
+no confidence at all. When something goes wrong, the instinct is: "But I approved it."
+The approval becomes a psychological artifact of accountability without the substance
+of it.
+
+---
+
+## The Principle: Control Must Be Task-Commensurate
+
+What meaningful human-in-the-loop design actually requires is that the form of human
+involvement matches the nature of the task. Call this **task-commensurate control**.
+
+It means asking: what would a human have to *do* to genuinely own this decision?
+
+For a grocery order, approving a list is probably sufficient. The task is low-stakes,
+easily reversible, and requires no specialized knowledge to evaluate. A summary is
+genuinely enough.
+
+For merging a code change, genuine ownership means at minimum reading the diff,
+understanding why each change was made, and reasoning about downstream effects. The
+AI can write the code. But the human needs to engage with it as though they wrote it
+— because they are the ones signing off on its correctness and consequences.
+
+For a medical diagnosis suggestion, genuine ownership might mean the clinician
+independently forming a differential before seeing the AI's recommendation, so their
+judgment isn't anchored by the model's output.
+
+The interaction model has to reflect the epistemic and practical demands of the specific
+task. **One button cannot carry that weight universally.**
+
+---
+
+## The Design Failure Is Structural, Not Incidental
+
+It would be easy to chalk this up to lazy product design — corners cut, deadlines met,
+good intentions poorly executed. But I think the problem is more structural than that.
+
+Human-in-the-loop is often added to AI systems for two reasons that have nothing to do
+with genuine human understanding: **legal liability** and **user comfort**. Companies
+want a record that a human approved the action. Users want to feel less like passive
+passengers. Both of these goals are satisfied by a button. Neither of them requires the
+button to represent real engagement.
+
+This means the incentive to build *genuinely meaningful* checkpoints is weak. A
+superficial approval loop serves the business purpose just as well as a rigorous one,
+and it's far cheaper to implement. The result is a generation of AI tools that wear the
+appearance of human oversight while quietly eroding it.
+
+---
+
+## What Task-Commensurate Control Looks Like in Practice
+
+Redesigning human-in-the-loop around this principle isn't about adding friction for its
+own sake. It's about calibrating friction to match the genuine complexity of the
+decision. Some concrete directions:
+
+- **Differentiated approval UX**: Low-stakes, reversible actions get simple confirms.
+  High-stakes, irreversible, or complex actions require demonstrated engagement —
+  reading, annotating, or responding to a targeted question before proceeding.
+
+- **Forced reasoning prompts**: Before approving a complex AI decision, the user is
+  asked a specific question about it: "What does this change affect downstream?" or
+  "Under what conditions might this fail?" If you can't answer it, you haven't actually
+  reviewed it.
+
+- **Irreversibility signals**: The UI should make the cost of the action viscerally
+  clear. Approving a grocery order and approving a database migration should *feel*
+  different, not just look different.
+
+- **Progressive disclosure**: Rather than summarizing everything and asking for a single
+  approval, break the review into steps that mirror how a human expert would actually
+  evaluate the work.
+
+- **Explicit accountability logging**: Show the user what they are specifically
+  certifying — not "you approved this" but "you are confirming that the session token
+  handling in auth.js is correct." Named, specific accountability changes the gravity
+  of the gesture.
+
+---
+
+## Closing Thought
+
+Human-in-the-loop is a good instinct. The recognition that AI systems need human
+judgment embedded in their operation — not just at setup and never again — is correct
+and important. But the execution of that instinct has, in too many cases, become a
+checkbox rather than a genuine mechanism.
+
+A single Approve button does not make a human responsible for a decision. It makes them
+a witness to one. Those are very different things — and if we keep confusing them, we'll
+end up with a generation of AI-assisted systems for which no one can really be held
+accountable, because everyone technically approved everything and no one actually
+understood anything.
+
+The goal isn't to slow AI down. It's to make the moments where humans engage with AI
+outputs actually *mean* something.
+
+> *This is Part 2 of a 3-part series. [← Part 1: The Doing Gap](/blog/the-doing-gap) | [Part 3 →: The
+> Memory Tax](/blog/the-memory-tax)*
+
+---
+
+*The original thoughts and ideas in this post are entirely my own. The prose was written
+with the assistance of Anthropic's Claude. Thanks, Claude.*
