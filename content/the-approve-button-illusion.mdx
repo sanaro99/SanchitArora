@@ -4,95 +4,66 @@ publishedAt: "2026-02-24"
 summary: "The current industry answer to the Doing Gap is 'human-in-the-loop' — but most implementations reduce this to a single generic approval gesture that is completely divorced from the nature of the task. This post argues that meaningful control must be task-commensurate, not task-agnostic, and that false agency may actually be worse than no agency at all."
 ---
 
-Everyone in the AI industry seems to agree on one thing: we need "humans in the loop."
-Keep people involved, the thinking goes, and you keep the system safe, accountable, and
-trustworthy.
+If there's one thing the AI industry seems to agree on, it's that humans need to stay in the loop. Keep people involved, the thinking goes, and the system stays safe. Accountable. Trustworthy.
 
-It sounds responsible. But look at how it’s actually implemented in most products, and
-you’ll see a problem. The "loop" isn't a loop. It’s just a button.
+It sounds responsible. And it might even be true, in principle.
+
+But look at how it's actually implemented in most products, and you'll quickly notice a problem. The "loop" isn't a loop. It's a button.
 
 ---
 
 ## A Button Is Not a Decision
 
-Imagine two scenarios.
+Picture two scenarios.
 
-**Scenario A:** An AI agent writes a complex piece of code for your app. It changes how
-user authentication works, modifies database schemas, and updates security protocols.
-It shows you a summary: "Auth logic updated. Ready to merge." There is one button: **Approve**.
+In the first, an AI agent has rewritten authentication logic for your app. It's touched the database schema, updated security protocols, and modified how sessions are handled. It shows you a summary: *"Auth logic updated. Ready to merge."* One button. **Approve.**
 
-**Scenario B:** An AI assistant drafts your weekly grocery list based on what you usually
-buy. Eggs, milk, bread. It asks: "Ready to order?" There is one button: **Approve**.
+In the second, an AI assistant has drafted your weekly grocery order based on your usual habits. Eggs, milk, bread, the oat milk you like. It asks: *"Ready to order?"* One button. **Approve.**
 
-The interface is identical. The physical action—clicking a button—is identical. But
-the stakes? Completely different. One approval could introduce a massive security
-vulnerability. The other might get you the wrong brand of oat milk.
+The interface is identical. The physical gesture — clicking a button — is identical. But the stakes are not. In the first scenario, a misunderstood change could introduce a serious security vulnerability. In the second, worst case, you get the wrong brand of cereal.
 
-This is the **Approve Button Illusion**. We are flattening every type of human oversight
-into a single, generic interaction that *feels* like control but provides almost none
-of it.
+This is what I think of as the Approve Button Illusion. We've flattened every kind of human oversight into a single, undifferentiated interaction that *feels* like control while providing almost none of it.
 
 ---
 
-## The "Summary" Trap
+## The Summary Screen Problem
 
-The standard defense is, "Well, the human reviewed the summary before clicking."
+The standard defense is that the human reviewed the summary before clicking. And sure — there's usually a summary. A few sentences. Maybe a bullet list of changes.
 
-Did they, though?
+But reading a three-sentence summary of a code migration is not the same thing as understanding it. To actually own that decision, you'd need to read the diff, trace the logic, and mentally run through what happens when something breaks. A summary screen discourages all of that. It's designed to be skimmed. It invites the click.
 
-Reading a three-sentence summary of a code migration is not the same as understanding
-it. To genuinely own that decision, you have to read the diff, understand the logic,
-and mentally simulate what happens if it fails. A summary screen discourages that deep
-work. It invites you to skim and click.
-
-Worse, it creates false confidence. When something breaks later, the instinct is,
-"But I approved it!" The button becomes a shield—a way to feel accountable without
-actually doing the work of accountability.
+What's worse is the false confidence it creates. When something does go wrong later, the first instinct is: *"But I approved it!"* The button has become a shield — a way to feel accountable without doing any of the work that accountability actually requires. The person signed off, technically. But they weren't really there.
 
 ---
 
-## Control Must Match the Task
+## The Control Has to Match the Stakes
 
-If we want humans to actually be in the loop, the control mechanism has to match the
-stakes of the task.
+If we want humans to genuinely be in the loop, the mechanism of control has to be proportional to what's at stake.
 
-For groceries? Sure, a button is fine. The cost of failure is low.
+For a grocery order? A button is fine. The cost of getting it wrong is low, and friction would be annoying for no good reason.
 
-For deploying code or medical advice? A button is not enough. Genuine ownership requires
-friction. The interface should demand that you engage. Maybe you have to answer a
-question about the downstream effects before you can proceed. Maybe you have to explicitly
-sign off on specific risk factors.
+For deploying code to production, or surfacing a medical recommendation, or executing a financial decision? A button is not enough. Genuine ownership of those outcomes requires real friction. The interface should demand engagement before it proceeds — maybe a forced question about downstream effects, maybe an explicit sign-off on specific risk factors, something that can't be completed on autopilot.
 
-The AI can do the heavy lifting, but the human needs to engage with the result as
-deeply as the consequences demand. One button cannot carry that weight for every
-situation.
+The AI can absolutely do the heavy lifting. That's the whole point of having it. But the depth of human engagement needs to match how badly things can go wrong. One button cannot carry that weight across every situation.
 
 ---
 
-## Why We Design It This Way
+## Why We Keep Building It This Way
 
-Why is the "Approve" button so ubiquitous? Because it’s cheap and it makes us feel better.
+So why is the single Approve button so ubiquitous? Honestly, because it's cheap and it makes everyone feel better.
 
-Companies want a record that a human signed off (for liability). Users want to feel like
-they aren't just passive passengers. A button satisfies both needs with zero friction.
-But it’s a design shortcut. It gives us the appearance of oversight while quietly eroding
-the reality of it.
+Companies want a record that a human signed off — that's important for liability. Users want to feel like they're not just passive passengers. A button satisfies both needs instantly and with zero friction. It's a design shortcut that preserves the *appearance* of oversight while quietly hollowing out the reality of it. Nobody has to admit that they're building a rubber stamp, because it doesn't look like one.
 
 ---
 
-## Fixing the Loop
+## What Better Looks Like
 
-We need to stop treating "approval" as a binary switch. Good AI design should differentiate:
+The fix isn't to remove approval mechanisms — it's to stop treating approval as binary. The right design differentiates.
 
-1.  **Low stakes?** Simple confirm.
-2.  **High stakes?** Forced reasoning. Ask the user, "What happens if this variable is null?" If they can't answer, they haven't reviewed it.
-3.  **Irreversible actions?** Make the UI *feel* heavy. Approving a database wipe shouldn't feel like ordering a pizza.
+Low stakes should feel light. A quick confirm, an easy undo, no drama. High stakes should require something real — not friction for its own sake, but genuine reasoning. If someone can't explain what happens when that null check fails, they haven't actually reviewed the change. The interface should catch that, not paper over it. And for anything irreversible — deleting a database, sending a mass communication, triggering a legal action — the UI itself should feel heavy. That kind of decision shouldn't feel like ordering a pizza.
 
-A single button does not make a human responsible for a decision. It just makes them a
-witness to one. Those are very different things. If we keep confusing them, we’re going
-to end up with systems where everyone technically approved everything, but nobody
-actually understood anything.
+A button doesn't make someone responsible for a decision. It makes them a witness to one. Those are genuinely different things, and we're going to keep building systems with real accountability gaps if we keep treating them as the same.
+
+Everyone technically approved everything. Nobody actually understood anything. That's the failure mode we're drifting toward, and it's a quiet one.
 
 > *[Previous: Part 1 — The Doing Gap](/blog/the-doing-gap) | [Next: Part 3 — The Memory Tax](/blog/the-memory-tax)*
-
----
