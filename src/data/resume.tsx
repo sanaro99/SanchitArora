@@ -4,20 +4,26 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Sanchit Arora",
   initials: "SA",
-  url: "https://sanchitarora.in",
-  location: "Pune, India",
-  locationLink: "https://www.google.com/maps/place/delhi",
+  url: "https://sanchitarora.me",
+  location: "Seattle, WA",
+  locationLink: "https://www.google.com/maps/place/seattle",
   description:
-    "Software Engineer at UBS Investment Bank",
+    "MS Student at University of Washington | Former Sr. Software Engineer at UBS",
   summary:
-    "I bring a strong mix of full-stack development and AI skills, focused on solving real problems with clean, reliable solutions. From LLM-powered tools to intelligent automation, my work is driven by clarity, speed, and impact: reducing manual effort, simplifying complexity, and enhancing system reliability.",
-  avatarUrl: "/me.png",
+    "Software Engineer with 4+ years at UBS designing AI-driven automation, full-stack systems, and reliability tooling. Built an LLM-powered automation platform that cut setup time 95% across 20 engineering teams. Currently pursuing an MS in Information Management at the University of Washington (3.98 GPA) with specializations in Artificial Intelligence and Product Management.",
+  avatarUrl: "/me.jpg",
   skills: [
     "Artificial Intelligence",
     "React",
+    "Svelte",
+    "Django",
     "Flask",
+    "FastAPI",
     "Git",
     "Python",
+    "JavaScript",
+    "TypeScript",
+    "Shell",
     "Azure",
     "Unix",
     "SQL",
@@ -26,8 +32,7 @@ export const DATA = {
     "BigPanda",
     "Amelia",
     "Next.js",
-    "Typescript",
-    "Node.js",  
+    "Node.js",
     "Postgres",
     "Docker",
     "Kubernetes",
@@ -36,22 +41,40 @@ export const DATA = {
     "Big Data",
     "Android Studio",
     "Machine Learning",
-    "Django",
+    "LLMs",
+    "RAG",
+    "LangChain",
+    "LangGraph",
+    "NLP",
     "Keras",
     "Pandas",
     "TensorFlow",
+    "PyTorch",
+    "Transformers",
+    "FAISS",
+    "sentence-transformers",
     "MATLAB",
     "HTML/CSS",
     "ReactJS",
     "Snowflake",
+    "Supabase",
+    "OAuth",
+    "CI/CD",
+    "System Design",
+    "Agile",
+    "Unit Testing",
+    "NGINX",
+    "TrueNAS",
+    "Monitoring",
+    "Incident Management",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "sanchitarora@outlook.in",
-    tel: "+91 9741402760",
+    email: "sanaro@uw.edu",
+    tel: "+1 (206) 605-4678",
     social: {
       GitHub: {
         name: "GitHub",
@@ -76,7 +99,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "mailto:sanchitarora@outlook.in?subject=Saw your portfolio",
+        url: "mailto:sanaro@uw.edu?subject=Saw your portfolio",
         icon: Icons.email,
 
         navbar: true,
@@ -88,21 +111,35 @@ export const DATA = {
     {
       company: "UBS Investment Bank",
       href: "https://www.ubs.com",
-      badges: ["AI", "Automation", "Azure", "Python", "Unix", "SQL", "Splunk", "Git", "AppDynamics", "BigPanda", "Amelia", "Docker", "Kubernetes","ReactJS"],
+      badges: ["AI", "Automation", "Azure", "Python", "Unix", "SQL", "Splunk", "Git", "AppDynamics", "BigPanda", "Amelia", "Docker", "Kubernetes", "ReactJS"],
       location: "Pune, India",
-      title: "Tech Site Reliability Engineer - II",
+      title: "Sr. Software Engineer",
+      logoUrl: "/ubs.png",
+      start: "March 2024",
+      end: "August 2025",
+      description:
+        `• Led AutoFlow development — an LLM-powered tool converting natural language to Amelia automation workflows using GPT-4.1, LangGraph, and FastAPI with React frontend; reduced automation setup time by 95% across 20 engineering teams<br />
+      • Launched RAG chatbot using Azure AI Search indexing 5 years of team emails (~50K docs), delivering automated incident diagnosis and step-by-step resolutions for production issues<br />
+      • Engineered config-driven monitoring dashboard with dynamic UI generation, aggregating server health and ticket data for 30+ teams; reduced MTTD by 60%<br />
+      • Mentored junior engineers through transition into high-stakes production environments; authored onboarding docs adopted by 3+ teams<br />
+      • Partnered with product and ops stakeholders to scope, design, and ship AI tooling within regulatory, cost, and latency constraints
+      `,
+    },
+    {
+      company: "UBS Investment Bank",
+      href: "https://www.ubs.com",
+      badges: ["Automation", "Splunk", "AppDynamics", "Python", "Unix", "SQL", "Docker", "Kubernetes"],
+      location: "Pune, India",
+      title: "Software Engineer (Executive Employee)",
       logoUrl: "/ubs.png",
       start: "July 2021",
-      end: "Present",
+      end: "March 2024",
       description:
-      `• Progressed through three roles: Graduate Trainee → Executive Employee → Authorized Officer, reflecting consistent high performance<br />
-      • Designed an AI-powered assistant web app integrating LLMs for SQL generation, knowledge base search, and query resolution<br />
-      • Built a Teams chatbot developed during a hackathon, integrating internal automation and health status tools to boost operational efficiency<br />
-      • Automated resolution of production incidents and routine requests, saving over 80 hours per month in manual effort<br />
-      • Created a digital huddle tool to track open issues and deliverables, cutting meeting frequency by 30% and enhancing team alignment<br />
-      • Developed 'IB Telemetry' to aggregate and sequence system data from multiple sources, improving visibility and accelerating incident triage<br />
-      • Implemented observability dashboards using Splunk and AppDynamics, enabling proactive alerting and reducing incident turnaround times<br />
-      • Tech stack: Python, Flask, API, React, AI, Unix, SQL, Azure, Automation
+        `• Automated 20+ recurring incident types and operational requests using Amelia IPSoft for 300+ internal users, saving 200+ engineering hours monthly<br />
+      • Built shift handover platform tracking deliverables and workload across regional shifts, cutting handoff time by 40% with manager dashboards<br />
+      • Created observability dashboards in Splunk and AppDynamics monitoring 200+ microservices, reducing incident detection time by 60% with proactive alerts<br />
+      • Managed incident response for 5 Tier-1 collateral applications processing $10B+ in daily transactions, maintaining 99.8% uptime through root-cause analysis and post-incident reviews<br />
+      • Earned Engineering Excellence Award (Aug 2022) and Quarterly Star Award (Apr 2023) for contributions to automation, observability, and operational excellence
       `,
     },
     {
@@ -115,7 +152,7 @@ export const DATA = {
       start: "March 2021",
       end: "July 2021",
       description:
-        "Developed models for the business process workflows of twenty Standard Operating Procedures (SOPs) used by the operations team in processing SWIFT messages",
+        "Designed 20 SWIFT message processing workflows in ARIS, standardizing and digitizing procedures across operations teams to enable future automation. Collaborated with business analysts and ops managers to identify inefficiencies and propose process improvements adopted by operations leadership.",
     },
     {
       company: "India Young Foundation",
@@ -144,6 +181,20 @@ export const DATA = {
   ],
   education: [
     {
+      school: "University of Washington",
+      href: "https://ischool.uw.edu/",
+      degree: "M.S. Information Management",
+      logoUrl: "/uw.png",
+      start: "2025",
+      end: "2027",
+      description:
+        `• GPA: 3.98/4.0<br />
+        • <b>Specializations:</b> Artificial Intelligence, Product Management<br />
+        • <b>Coursework:</b> Implementing & Managing GenAI Systems, Building & Applying LLMs, Principles of Product & Project Management, Product Strategy, Information Policy and Ethics<br />
+        • <b>Reader/Grader</b>, LIS 589 Academic Librarianship (UW iSchool, Winter 2026), LIS 510 Information Behavior (UW iSchool, Spring 2026)
+        `,
+    },
+    {
       school: "Manipal Institute of Technology",
       href: "https://www.manipal.edu/mit/program-list/btech/btech-information-technology.html",
       degree: "B.Tech. Information Technology",
@@ -151,33 +202,87 @@ export const DATA = {
       start: "2017",
       end: "2021",
       description:
-        `• CGPA: 8.26<br />
-        • <b>Minor in Big Data</b>, Other courses: Machine Learning, Business Intelligence, Data Analytics, Data Warehousing, Pattern Recognition<br />
+        `• GPA: 3.7/4.0 (8.26 CGPA)<br />
+        • <b>Minor in Big Data</b>, Other courses: Machine Learning, Distributed Systems, Data Analytics, Data Warehousing, Pattern Recognition, Internet of Things<br />
         • <b>Technical Head - The Astronomy Club</b>: Led the Data Science Project, the Optical Telescope Project, and the Star Tracker Project
         `,
     },
-    // {
-    //   school: "Montfort School",
-    //   href: "https://montfortschooldelhi.in",
-    //   degree: "Senior Secondary School",
-    //   logoUrl: "/montfort.png",
-    //   start: "2005",
-    //   end: "2017",
-    // },
+    {
+      school: "Montfort School",
+      href: "https://montfortschooldelhi.in",
+      degree: "Senior Secondary (CBSE)",
+      logoUrl: "/montfort.png",
+      start: "2005",
+      end: "2017",
+      description:
+        `• Percentage: 93.8%<br />
+        • <b>Subjects:</b> Physics, Chemistry, Mathematics, Computer Science, English
+        `,
+    },
   ],
   projects: [
     {
-      title: "Fantasy Cricket",
-      href: "/projects/fantasy-cricket.png",
-      dates: "April - May 2025",
+      title: "DarkGuard / Trusten",
+      href: "/projects/darkguard.png",
+      dates: "2025 – Present",
       active: true,
       description:
-        "Fantasy Cricket web app built with Next.js, Tailwind CSS, and Supabase. Features OAuth & email login, match/player selection, and leaderboards. Currently supports IPL, with extensibility for other leagues.",
+        "Browser extension that scans any website for dark patterns, grades it A–F on honesty, and maps every finding to the specific laws it may violate. Built with a hybrid rule-based + multi-model AI detection engine covering 24 manipulation categories across 10 analysis modules, with a false positive rate below 3%. Includes a deep scan engine that walks multi-step user flows autonomously, capturing screenshot evidence at each step. 118 automated tests, regulatory mapping to 14 international frameworks (FTC Act, EU DSA, GDPR).",
+      technologies: [
+        "JavaScript",
+        "Browser Extension",
+        "NLP",
+        "LLMs",
+        "DOM Analysis",
+        "REST API",
+      ],
+      links: [
+        {
+          type: "Blog",
+          href: "/blog/the-approve-button-illusion",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/projects/darkguard.png",
+      video: undefined,
+    },
+    {
+      title: "GenASL: Generative ASL Pipeline",
+      href: "/projects/genasl.png",
+      dates: "2025",
+      active: true,
+      description:
+        "End-to-end AI pipeline generating Picture-in-Picture American Sign Language overlays for YouTube videos. Translates English transcripts to syntactically correct ASL gloss sequences using LLMs (not word-for-word — ASL has its own grammar). Clip-chaining system maps gloss to 2,000+ video assets via FAISS + sentence-transformer embeddings, compositing final outputs with FFmpeg.",
+      technologies: [
+        "Python",
+        "LLMs",
+        "FAISS",
+        "sentence-transformers",
+        "FFmpeg",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sanaro99/GenASL",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/genasl.png",
+      video: undefined,
+    },
+    {
+      title: "Fantasy Cricket",
+      href: "/projects/fantasy-cricket.png",
+      dates: "April – May 2025",
+      active: true,
+      description:
+        "Full-stack fantasy cricket platform serving 1,000+ users with real-time leaderboards, OAuth2, and Supabase Row-Level Security. Features context-aware AI match summaries using Gemini API with Google Search grounding, adapting to pre/live/post-match states. Currently supports IPL, with extensibility for other leagues.",
       technologies: [
         "Next.js",
-        "Tailwind CSS",
         "Supabase",
-        "OAuth"
+        "Gemini API",
+        "OAuth2",
+        "Tailwind CSS",
       ],
       links: [
         {
@@ -195,17 +300,42 @@ export const DATA = {
       video: undefined,
     },
     {
-      title: "Personal NAS with TrueNAS SCALE",
-      href: "/projects/trueNAS.png",
-      dates: "May 2025",
+      title: "NBT-Gen: Never-Before-Thought Generator",
+      href: "/projects/nbt-gen.png",
+      dates: "2025",
       active: true,
       description:
-        "Built a self-hosted NAS using an old laptop and TrueNAS SCALE for private cloud storage, daily phone backups, photo hosting, virtual machines, and remote access.",
+        "FastAPI pipeline that inverts assumptions about a topic and generates counterintuitive ideas via Gemini. Features automated quality scoring with Mistral and a NES.css retro UI with a user-tunable 'wildness' slider for model temperature.",
       technologies: [
-        "TrueNAS SCALE",
+        "FastAPI",
+        "Gemini API",
+        "Mistral API",
+        "Jinja2",
+        "NES.css",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/sanaro99/NBT-Gen",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/nbt-gen.png",
+      video: undefined,
+    },
+    {
+      title: "Global Personal Cloud",
+      href: "/projects/trueNAS.png",
+      dates: "2025 – Present",
+      active: true,
+      description:
+        "Self-hosted private cloud with ZFS-backed storage, automated remote backups, and VM hosting. Cross-continent NGINX architecture with read/write splitting: reads served from the geographically closer node (Seattle), writes routed to Delhi as the consistency primary, with ~200ms cross-Pacific ZFS replication.",
+      technologies: [
+        "TrueNAS",
         "ZFS",
-        "SMB (Samba)",
-        "Linux Scripting",
+        "NGINX",
+        "Linux",
+        "Networking",
       ],
       links: [
         {
@@ -223,7 +353,7 @@ export const DATA = {
       dates: "Jan 2021",
       active: true,
       description:
-        "Real-time facial mask detection model using Haar Cascade classifiers to verify correct mask usage.",
+        "Real-time mask detection for edge devices (Raspberry Pi), using Haar Cascade for fast face detection with low latency.",
       technologies: [
         "Python",
         "OpenCV",
@@ -352,23 +482,44 @@ export const DATA = {
   ],
   achievements: [
     {
+      title: "2nd Place, AIMS Product Competition",
+      date: "February 2026",
+      description: "Runner-up for engineering an AI-integrated campus marketplace MVP with behavioral TrustScores, verified user identities, and built-in logistics.",
+      image: "/achievements/aims-competition.png",
+      video: undefined,
+    },
+    {
       title: "Quarterly Star Award",
       date: "April 2023",
-      description: "Recognised with the Quarterly Star Award for exceptional contributions to UBS in the first quarter of 2023.",
+      description: "Recognised with the Quarterly Star Award for exceptional contributions in automation, observability, and operational excellence at UBS.",
       image: "/achievements/star-award.png",
       video: undefined,
     },
     {
       title: "Engineering Excellence Award",
       date: "August 2022",
-      description: "Awarded with Engineering Excellence for being among the top performers completing a year of full-time employment at UBS.",
+      description: "Awarded for outstanding performance in incident response, observability dashboards, and people-and-culture contributions at UBS.",
       image: "/achievements/excellence-award.jpg",
       video: undefined,
     },
   ],
 
-  // Online courses section
+  // Online courses & certifications section
   courses: [
+    {
+      name: "UBS Certified Engineer — Software Engineer",
+      url: "/courses/ubs-certified.png",
+      date: "June 2025",
+      image: "/courses/ubs-certified.png",
+      issued_by: "UBS",
+    },
+    {
+      name: "Azure Cloud Fundamentals (AZ-900)",
+      url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+      date: "June 2025",
+      image: "/courses/azure-cloud-az900.png",
+      issued_by: "Microsoft",
+    },
     {
       name: "Azure AI Fundamentals (AI-900)",
       url: "https://learn.microsoft.com/api/credentials/share/en-us/sanchitarora/555364719FD9C893?sharingId=CC2941D544480702",
