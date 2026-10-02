@@ -18,6 +18,7 @@ export async function generateMetadata({
   };
 }): Promise<Metadata | undefined> {
   let post = await getPost(params.slug);
+  if (!post) notFound();
 
   let {
     title,
@@ -25,11 +26,12 @@ export async function generateMetadata({
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  let ogImage = image ? new URL(image, DATA.url).href : `${DATA.url}/opengraph-image`;
 
   return {
     title,
     description,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title,
       description,
@@ -79,7 +81,7 @@ export default async function Blog({
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${DATA.url}${post.metadata.image}`
-              : `${DATA.url}/og?title=${post.metadata.title}`,
+              : `${DATA.url}/opengraph-image`,
             url: `${DATA.url}/blog/${post.slug}`,
             author: {
               "@type": "Person",

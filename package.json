@@ -2,11 +2,13 @@
   "name": "porfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": { "node": ">=22.18.0" },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tests/*.test.mjs"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.6",

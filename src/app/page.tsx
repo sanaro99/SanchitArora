@@ -1,4 +1,3 @@
-import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -8,10 +7,13 @@ import { CourseCard } from "@/components/course-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Page() {
   return (
@@ -20,12 +22,12 @@ export default function Page() {
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
-              <BlurFadeText
+              <h1 aria-label={`Sanchit Arora — Software Engineer`}><BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
-              />
+              /></h1>
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
@@ -58,11 +60,10 @@ export default function Page() {
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
-              key={work.company}
+              key={`${work.company}-${work.start}`}
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-                key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -71,6 +72,7 @@ export default function Page() {
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 description={work.description}
+                defaultExpanded={id === 0}
               />
             </BlurFade>
           ))}
@@ -127,7 +129,7 @@ export default function Page() {
                   Check out my projects
                 </h2>
                 <p className="text-muted-foreground text-base/relaxed">
-                  From real-time machine learning apps and self-hosted cloud solutions to mobile tools and innovative web platforms, my projects reflect a passion for solving real-world problems with technology. Here are some highlights that showcase my experience in full-stack development, automation, and creative engineering.
+                  Products I build and use, research I contribute to, and earlier experiments. Each project includes its current stage, the engineering behind it, and a way to explore the work.
                 </p>
               </div>
             </div>
@@ -144,8 +146,11 @@ export default function Page() {
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
+                  status={project.status}
                   tags={project.technologies}
                   image={project.image}
+                  imageAlt={project.imageAlt}
+                  imageCaption={project.imageCaption}
                   video={project.video}
                   links={project.links}
                 />
@@ -168,7 +173,7 @@ export default function Page() {
                   Lifelong Learning & Upskilling
                 </h2>
                 <p className="text-muted-foreground text-base/relaxed">
-                  I am passionate about continuous learning and have completed several online courses to expand my technical expertise and stay current in the fast-evolving tech landscape. Here are some of the certifications and courses that have helped me grow as an engineer.
+                  Courses and certifications that support my work in AI, software engineering, and cloud infrastructure.
                 </p>
               </div>
             </div>
@@ -195,7 +200,7 @@ export default function Page() {
                   Recognized for Excellence
                 </h2>
                 <p className="text-muted-foreground text-base/relaxed">
-                  Throughout my career, I’ve built a reputation for engineering excellence, operational resilience, and delivering measurable impact-particularly at UBS. My work is driven by automation, collaboration, and a relentless focus on results. Below are some key milestones.
+                  Recognition for product development, automation, and reliability work at the University of Washington and UBS.
                 </p>
               </div>
             </div>
