@@ -74,6 +74,7 @@ Before publishing, check the homepage and blog on desktop and mobile, both color
 
 ## 📦 Deployment
 You can deploy this site on [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/), or any platform that supports Next.js.
+`netlify.toml` sets the Next.js build command and `.next` output, overriding old site settings for other frameworks.
 
 ---
 
