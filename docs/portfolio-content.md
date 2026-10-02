@@ -32,11 +32,18 @@ All product screenshots are from the actual applications or their existing repos
 | `public/projects/genasl.png` | Extension interface from the earlier overlay prototype, not proof of finished avatar synthesis. |
 | `public/projects/nbt-gen.jpg` | Local application interface with a sample topic; no generated result or paid inference was used. |
 | `public/projects/asl-research.svg` | Code-native overview of the implemented research stages and comparison conditions; not a product screenshot. |
+| `public/projects/applination-{board,detail,coach}.png` | Additional screens of the same fictional John Doe demo; simulated AI responses. |
+| `public/projects/applination-walkthrough.webm` | Existing demo recording showing navigation through application tracking, generated documents and interview preparation. Fictional candidate and simulated AI responses. |
+| `public/projects/trusten-{audit,report}.png` | Repository audit form and sample report for an example domain. |
+| `public/projects/kalp-{today,reflection,insights}.jpg` | Repository mobile web previews with test journal entries. |
+| `public/projects/coupleogames-{in-sync,clue-quest}.png` | Repository sample game rounds for Alex and Jamie. |
 
 Existing historical images and documented work, education, awards and certificates are retained. AIMS competition and UBS engineer certification records have no available image; those cards display a text fallback. AZ-900 links to Microsoft's certification information and is labeled **Certification details**. Do not replace missing certificates with another credential's image.
 
 ## Keeping the site current
 
 Update `src/data/resume.tsx` and add genuine assets under `public/`. For a project, verify the description against its current implementation, set an accurate stage, and choose the live app, source or write-up as its primary destination. Keep captions on sample data and older prototypes. Recheck dated claims and performance numbers before changing them.
+
+Project cards accept an optional `media` array. Each entry has `type` (`image` or `video`), `src`, descriptive `alt`, and an optional `caption`; a video can also have a `poster`. Put the cover image first. Existing single `image`/`video` fields remain supported when no gallery array is supplied. The gallery loads video metadata only when its slide is selected, uses native playback controls without autoplay, and stops playback when changing slides or closing. Visitors can use arrows, thumbnails, keyboard keys or a horizontal swipe; Escape, the visible close button and the backdrop dismiss the viewer.
 
 Run the validation commands in the README. Check image rendering and mobile layout in both themes, keyboard expansion of work/education cards, internal blog destinations, and the social preview image. Keep secrets and private infrastructure details out of both text and screenshots.

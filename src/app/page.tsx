@@ -152,6 +152,7 @@ export default function Page() {
                   imageAlt={project.imageAlt}
                   imageCaption={project.imageCaption}
                   video={project.video}
+                  media={"media" in project ? project.media : undefined}
                   links={project.links}
                 />
               </BlurFade>
