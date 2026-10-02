@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import React from "react";
 
@@ -17,6 +17,7 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
+  defaultExpanded?: boolean;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -27,83 +28,86 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  defaultExpanded = false,
 }: ResumeCardProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
-
-  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (description) {
-      e.preventDefault();
-      setIsExpanded(!isExpanded);
-    }
-  };
+  const [isExpanded, setIsExpanded] = React.useState(defaultExpanded);
+  const detailsId = React.useId();
+  const reducedMotion = useReducedMotion();
 
   return (
     <Card className="flex">
       <div className="flex-none">
         {href ? (
-          <a href={href} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-            <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${title}`}>
+            <Avatar className="border size-12 m-auto bg-white">
               <AvatarImage src={logoUrl} alt={altText} className="object-contain" />
               <AvatarFallback>{altText[0]}</AvatarFallback>
             </Avatar>
           </a>
         ) : (
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="border size-12 m-auto bg-white">
             <AvatarImage src={logoUrl} alt={altText} className="object-contain" />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         )}
       </div>
-      <div className="flex-grow ml-4 items-center flex-col group cursor-pointer" onClick={handleClick}>
+      <div className="min-w-0 flex-grow ml-4 items-center flex-col group">
         <CardHeader>
-          <div className="flex items-center justify-between gap-x-2 text-base">
-            <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+          <h3><button type="button" className="w-full rounded-sm text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4"
+            aria-expanded={isExpanded} aria-controls={detailsId}
+            aria-label={`${isExpanded ? "Collapse" : "Expand"} ${title}${subtitle ? `, ${subtitle}` : ""}, ${period} details`}
+            onClick={() => setIsExpanded((expanded) => !expanded)}>
+          <span className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-x-2 text-base">
+            <span className="inline-flex items-center font-semibold leading-none text-xs sm:text-sm">
               {title}
               <ChevronRightIcon
                 className={cn(
-                  "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                  "ml-1 size-4 shrink-0 transition-transform",
                   isExpanded ? "rotate-90" : "rotate-0"
                 )}
               />
-            </h3>
-            <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+            </span>
+            <span className="text-xs sm:text-sm font-normal tabular-nums text-muted-foreground sm:text-right">
               {period}
-            </div>
-          </div>
-          {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            </span>
+          </span>
+          {subtitle && <span className="mt-1 block font-sans text-xs font-normal">{subtitle}</span>}
+          </button></h3>
         </CardHeader>
+        <div id={detailsId} aria-hidden={!isExpanded} className="overflow-hidden">
         {badges && badges.length > 0 && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={false}
             animate={{
               opacity: isExpanded ? 1 : 0,
               height: isExpanded ? "auto" : 0,
             }}
             transition={{
-              duration: 0.7,
+              duration: reducedMotion ? 0 : 0.25,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="mt-2 flex flex-wrap gap-1">
+            className="overflow-hidden flex flex-wrap gap-1">
             {badges.map((badge, index) => (
-              <Badge variant="secondary" className="align-middle text-xs" key={index}>{badge}</Badge>
+              <Badge variant="secondary" className="align-middle text-xs mt-2" key={index}>{badge}</Badge>
             ))}
           </motion.div>
         )}
         {description && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={false}
             animate={{
               opacity: isExpanded ? 1 : 0,
               height: isExpanded ? "auto" : 0,
             }}
             transition={{
-              duration: 0.7,
+              duration: reducedMotion ? 0 : 0.25,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="mt-2 text-xs sm:text-sm"
+            className="overflow-hidden text-xs sm:text-sm leading-relaxed text-muted-foreground"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         )}
+        </div>
       </div>
     </Card>
   );

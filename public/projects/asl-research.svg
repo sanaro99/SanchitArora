@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">English to ASL gloss research</title><desc id="desc">English, retrieved examples, and paragraph context feed a language model. Gloss and non-manual markers are evaluated in four conditions.</desc>
+<rect width="1200" height="675" fill="#f3f5fa"/>
+<g font-family="system-ui, sans-serif" fill="#17233d">
+<text x="70" y="100" font-size="25" letter-spacing="3">UW INDEPENDENT STUDY · 2026</text>
+<text x="70" y="168" font-size="49" font-weight="700">English → ASL gloss</text>
+<text x="70" y="220" font-size="25" fill="#536078">Retrieval, paragraph context &amp; non-manual markers</text>
+<g fill="white" stroke="#cbd5e1" stroke-width="2"><rect x="70" y="280" width="270" height="145" rx="20"/><rect x="465" y="280" width="270" height="145" rx="20"/><rect x="860" y="280" width="270" height="145" rx="20"/></g>
+<g font-size="29" text-anchor="middle"><text x="205" y="335" font-weight="600">English</text><text x="205" y="378" font-size="22">+ examples + context</text><text x="600" y="335" font-weight="600">Language model</text><text x="600" y="378" font-size="22">Structured translation</text><text x="995" y="335" font-weight="600">Gloss + markers</text><text x="995" y="378" font-size="22">Evaluation &amp; error review</text></g>
+<path d="M355 350h90m-15-12 15 12-15 12M750 350h90m-15-12 15 12-15 12" stroke="#536078" stroke-width="4" fill="none"/>
+<rect x="70" y="490" width="1060" height="105" rx="20" fill="#17233d"/>
+<text x="600" y="531" text-anchor="middle" font-size="21" fill="#bac8e2">FOUR COMPARISON CONDITIONS</text>
+<text x="600" y="570" text-anchor="middle" font-size="24" fill="white">Baseline · Retrieval · Context · Retrieval + Context</text>
+</g></svg>

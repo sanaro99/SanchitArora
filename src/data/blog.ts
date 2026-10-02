@@ -39,7 +39,9 @@ export async function markdownToHTML(markdown: string) {
 }
 
 export async function getPost(slug: string) {
-  const filePath = path.join("content", `${slug}.mdx`);
+  if (!/^[a-z0-9-]+$/.test(slug)) return undefined;
+  const filePath = path.join(process.cwd(), "content", `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return undefined;
   let source = fs.readFileSync(filePath, "utf-8");
   const { content: rawContent, data: metadata } = matter(source);
   const content = await markdownToHTML(rawContent);
@@ -55,7 +57,9 @@ async function getAllPosts(dir: string) {
   return Promise.all(
     mdxFiles.map(async (file) => {
       let slug = path.basename(file, path.extname(file));
-      let { metadata, source } = await getPost(slug);
+      const post = await getPost(slug);
+      if (!post) throw new Error(`Blog post not found: ${slug}`);
+      const { metadata, source } = post;
       return {
         metadata,
         slug,

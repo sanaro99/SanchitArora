@@ -7,7 +7,7 @@ interface AchievementCardProps {
   title: string;
   date?: string;
   description: string;
-  image: string;
+  image?: string;
   altText?: string;
 }
 
@@ -15,7 +15,7 @@ export const AchievementCard = ({ title, date, description, image, altText }: Ac
   <Card className="mb-3 p-4 flex items-center">
     <div className="flex-none">
       <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-        <AvatarImage src={image} alt={altText || title} className="object-contain" />
+        {image && <AvatarImage src={image} alt={altText || title} className="object-contain" />}
         <AvatarFallback>{(altText || title)[0]}</AvatarFallback>
       </Avatar>
     </div>
