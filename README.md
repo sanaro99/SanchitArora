@@ -33,7 +33,7 @@ This is the personal portfolio website of Sanchit Arora, built with Next.js, Rea
 
 ## 🖥️ Getting Started
 
-Use Node.js 22.18 or newer. The blog regression tests use Node's built-in TypeScript support.
+Use Node.js 22.18 or newer. The blog regression tests use Node's built-in TypeScript support. `.nvmrc` selects Node 24 for local version managers and Netlify builds, overriding legacy hosting defaults.
 
 1. **Clone the repository:**
    ```bash
