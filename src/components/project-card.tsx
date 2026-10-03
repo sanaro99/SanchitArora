@@ -7,6 +7,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import type { ProjectMedia } from "@/lib/project-media";
+import { ProjectGallery } from "@/components/project-gallery";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -23,6 +25,7 @@ interface Props {
   imageAlt?: string;
   imageCaption?: string;
   video?: string;
+  media?: readonly ProjectMedia[];
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -43,9 +46,16 @@ export function ProjectCard({
   imageAlt,
   imageCaption,
   video,
+  media,
   links,
   className,
 }: Props) {
+  const gallery: readonly ProjectMedia[] = media?.length ? media : [
+    ...(image ? [{ type: "image" as const, src: image, alt: imageAlt || title, caption: imageCaption }] : []),
+    ...(video ? [{ type: "video" as const, src: video, alt: `${title} walkthrough`, poster: image }] : []),
+  ];
+  const cover = gallery.find((entry) => entry.type === "image");
+  const previewImage = image || cover?.src;
   return (
     <Card
       className={
@@ -69,10 +79,10 @@ export function ProjectCard({
             className="pointer-events-none mx-auto aspect-video w-full object-contain"
           />
         )}
-        {image && (
+        {previewImage && (
           <Image
-            src={image}
-            alt={imageAlt || title}
+            src={previewImage}
+            alt={imageAlt || cover?.alt || title}
             width={640}
             height={360}
             sizes="(min-width: 640px) 304px, calc(100vw - 48px)"
@@ -114,7 +124,7 @@ export function ProjectCard({
         )}
       </CardContent>
       <CardFooter className="px-3 pb-3">
-        {(image || (links && links.length > 0)) && (
+        {(gallery.length > 0 || (links && links.length > 0)) && (
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link.href} key={link.href}
@@ -127,12 +137,7 @@ export function ProjectCard({
                 </Badge>
               </Link>
             ))}
-            {image && (
-              <Link href={image} target="_blank" rel="noopener noreferrer"
-                aria-label={`${title}: View full image`}>
-                <Badge variant="outline" className="px-2 py-1 text-[10px]">View image</Badge>
-              </Link>
-            )}
+            {gallery.length > 0 && <ProjectGallery title={title} media={gallery} />}
           </div>
         )}
       </CardFooter>

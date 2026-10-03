@@ -238,6 +238,13 @@ export const DATA = {
       image: "/projects/applination.png",
       imageAlt: "Applination demo application tracker with scores, statuses, and deadlines",
       imageCaption: "Demo account with fictional application data.",
+      media: [
+        { type: "image", src: "/projects/applination.png", alt: "Application table with match scores and deadlines", caption: "Fictional John Doe demo account; AI responses are simulated." },
+        { type: "image", src: "/projects/applination-board.png", alt: "Application Kanban board organized by stage", caption: "The same fictional demo applications, organized from generated to archived." },
+        { type: "image", src: "/projects/applination-detail.png", alt: "Application details with tailored resume and cover letter previews", caption: "Generated documents for the fictional demo candidate." },
+        { type: "image", src: "/projects/applination-coach.png", alt: "Interview coach with a simulated conversation and answer bank", caption: "Interview preparation in the demo; AI responses are simulated." },
+        { type: "video", src: "/projects/applination-walkthrough.webm", poster: "/projects/applination.png", alt: "Applination demo walkthrough", caption: "Recorded navigation through the fictional demo workspace, with simulated AI responses." },
+      ],
       links: [
         { type: "Live", href: "https://applination.sanchitarora.me", icon: <Icons.globe className="size-3" /> },
         { type: "Source", href: "https://github.com/sanaro99/applination", icon: <Icons.github className="size-3" /> },
@@ -254,6 +261,11 @@ export const DATA = {
       image: "/projects/trusten.png",
       imageAlt: "Trusten dashboard with a scan form, trust grades, and recent scans",
       imageCaption: "Dashboard with sample scan history.",
+      media: [
+        { type: "image", src: "/projects/trusten.png", alt: "Trusten dashboard with a scan form and recent scans", caption: "Dashboard with sample scan history." },
+        { type: "image", src: "/projects/trusten-audit.png", alt: "Trusten audit form with checkout, signup, cookies, pricing, and cancellation workflows", caption: "Audit setup with an example domain and selectable workflows." },
+        { type: "image", src: "/projects/trusten-report.png", alt: "Trusten sample scan report with categorized findings and evidence", caption: "Sample report for shady-shop.example; the fixture illustrates findings and evidence." },
+      ],
       links: [
         { type: "Source", href: "https://github.com/sanaro99/trusten", icon: <Icons.github className="size-3" /> },
         { type: "Blog", href: "/blog/the-approve-button-illusion", icon: <Icons.globe className="size-3" /> },
@@ -270,6 +282,12 @@ export const DATA = {
       image: "/projects/kalp.jpg",
       imageAlt: "Kalp weekly review showing a focus score, recorded answer count, and a small change to try",
       imageCaption: "Web preview with test journal entries.",
+      media: [
+        { type: "image", src: "/projects/kalp.jpg", alt: "Kalp weekly summary with observation coverage and a small change", caption: "Weekly review in the web preview, using test journal entries." },
+        { type: "image", src: "/projects/kalp-today.jpg", alt: "Kalp Today screen with a saved focus check-in and activity timeline", caption: "Mobile web preview with test activity and check-in data." },
+        { type: "image", src: "/projects/kalp-reflection.jpg", alt: "Kalp daily reflection with a calm rating and optional feelings", caption: "Mobile reflection screen with a sample check-in." },
+        { type: "image", src: "/projects/kalp-insights.jpg", alt: "Kalp Insights screen explaining observation coverage and recorded associations", caption: "Mobile insights with test data; observations are not causal conclusions." },
+      ],
       links: [
         { type: "Source", href: "https://github.com/sanaro99/kalp", icon: <Icons.github className="size-3" /> },
       ],
@@ -285,6 +303,11 @@ export const DATA = {
       image: "/projects/coupleogames.png",
       imageAlt: "CoupleOGames sample table for Alex and Jamie with four game cards and an animated cat",
       imageCaption: "Sample table for Alex and Jamie.",
+      media: [
+        { type: "image", src: "/projects/coupleogames.png", alt: "CoupleOGames game menu for Alex and Jamie", caption: "Sample table for Alex and Jamie, with four game choices." },
+        { type: "image", src: "/projects/coupleogames-in-sync.png", alt: "In Sync answer reveal showing matching answers", caption: "Sample In Sync round for Alex and Jamie." },
+        { type: "image", src: "/projects/coupleogames-clue-quest.png", alt: "Clue Quest word grid with hidden targets and a clue input", caption: "Sample Clue Quest round on mobile." },
+      ],
       links: [
         { type: "Source", href: "https://github.com/sanaro99/coupleogames", icon: <Icons.github className="size-3" /> },
       ],

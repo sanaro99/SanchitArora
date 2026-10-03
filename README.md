@@ -33,7 +33,7 @@ This is the personal portfolio website of Sanchit Arora, built with Next.js, Rea
 
 ## 🖥️ Getting Started
 
-Use Node.js 22.18 or newer. The blog regression tests use Node's built-in TypeScript support. `.nvmrc` selects Node 24 for local version managers and Netlify builds, overriding legacy hosting defaults.
+Use Node.js 22.18 or newer. The tests use tsx to run TypeScript/React code and jsdom for gallery interaction checks. `.nvmrc` selects Node 24 for local version managers and Netlify builds, overriding legacy hosting defaults.
 
 1. **Clone the repository:**
    ```bash
@@ -70,7 +70,7 @@ npx tsc --noEmit
 npm run build
 ```
 
-Before publishing, check the homepage and blog on desktop and mobile, both color themes, keyboard access to experience details, and every local image and project link.
+Before publishing, check the homepage and blog on desktop and mobile, both color themes, keyboard access to experience details, and every local image and project link. For galleries, verify thumbnails, arrows, swipe navigation, video playback, focus containment, and dismissal with Escape and the close button.
 
 ## 📦 Deployment
 You can deploy this site on [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/), or any platform that supports Next.js.
