@@ -61,6 +61,21 @@ Use Node.js 22.18 or newer. The tests use tsx to run TypeScript/React code and j
 - Customize components in `src/components/` for further personalization.
 - See [content and asset notes](docs/portfolio-content.md) for project sources, screenshot context, and how to keep the portfolio current.
 
+## Resume
+
+The latest resume lives in [`public/resume/`](public/resume/):
+
+- [`sanchit_arora_resume.pdf`](public/resume/sanchit_arora_resume.pdf) is linked from the homepage's **Download resume (PDF)** button and served at `/resume/sanchit_arora_resume.pdf`.
+- [`sanchit_arora_resume.tex`](public/resume/sanchit_arora_resume.tex) is the editable source, adapted from the supplied Sourabh Bajaj template (MIT License).
+
+To rebuild with a LaTeX distribution such as TeX Live or MiKTeX, run from `public/resume/`:
+
+```bash
+pdflatex -interaction=nonstopmode -halt-on-error sanchit_arora_resume.tex
+```
+
+Commit both the source and regenerated PDF when updating the resume. LaTeX build files are ignored.
+
 ## Validation
 
 ```bash

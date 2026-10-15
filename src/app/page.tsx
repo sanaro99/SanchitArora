@@ -6,7 +6,9 @@ import { AchievementCard } from "@/components/achievement-card";
 import { CourseCard } from "@/components/course-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
+import { Download } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -41,6 +43,17 @@ export default function Page() {
               </Avatar>
             </BlurFade>
           </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 2}>
+            <Button asChild variant="outline">
+              <a
+                href="/resume/sanchit_arora_resume.pdf"
+                download="Sanchit_Arora_Resume.pdf"
+              >
+                <Download className="mr-2 size-4" aria-hidden="true" />
+                Download resume (PDF)
+              </a>
+            </Button>
+          </BlurFade>
         </div>
       </section>
       <section id="about">
