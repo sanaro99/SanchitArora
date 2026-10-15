@@ -3,7 +3,9 @@
 % Content: Sanchit Arora; source resume supplied October 14, 2026.
 % Build: pdflatex -interaction=nonstopmode -halt-on-error sanchit_arora_resume.tex
 %-------------------------
-\documentclass[letterpaper,10pt]{article}
+% Allow the template's Computer Modern fonts to scale to an exact 10.5pt.
+\RequirePackage{fix-cm}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -32,8 +34,11 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 \setlength{\parindent}{0pt}
-\setlength{\footskip}{4pt}
-\linespread{0.95}
+\setlength{\footskip}{5pt}
+\linespread{1.0}
+% Keep the template's font commands while setting the actual body text to 10.5pt.
+\renewcommand{\small}{\fontsize{10.5pt}{12pt}\selectfont}
+\AtBeginDocument{\small}
 \hypersetup{
   pdftitle={Sanchit Arora - Resume},
   pdfauthor={Sanchit Arora},
@@ -50,7 +55,7 @@
   \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\small #3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-3pt}
+  \end{tabular*}\vspace{-1pt}
 }
 \newcommand{\resumeItemPlain}[1]{\item\small{#1}}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt,label={},topsep=0pt,itemsep=1pt,parsep=0pt]}
@@ -69,7 +74,7 @@
 \end{tabular*}
 
 \section{Summary}
-\small Software Engineer and UW graduate student with 4+ years building production AI tooling, full-stack systems, and high-availability infrastructure. Proven ownership across the product lifecycle, from architecting LLM-driven CLI tools to supporting Tier-1 financial systems, with a focus on developer productivity and operational reliability at scale.
+\small Software Engineer and UW graduate student with 4+ years building production AI tools, full-stack systems, and high-availability infrastructure. Owns the product lifecycle from LLM-driven CLI tools to Tier-1 financial systems, focusing on developer productivity and operational reliability at scale.
 
 \section{Education}
 \resumeSubHeadingListStart
@@ -77,8 +82,8 @@
     {Master of Science, Information Management; GPA: 3.98/4}{Sep. 2025 -- Jun. 2027 (expected)}
   {\small
     Specializations: Artificial Intelligence, Product Management.\\
-    Coursework: Implementing and Managing GenAI Systems, Product Strategy and Leadership, Cloud Computing and AI.\\
-    Honors \& Academic Service: Tolo Scholar, Tapia Scholar; Academic Reader \& Grader across 6 Information School graduate courses.
+    Courses: Implementing \& Managing GenAI Systems, Product Strategy \& Leadership, Cloud Computing \& AI.\\
+    Honors \& Service: Tolo Scholar, Tapia Scholar; Reader \& Grader for 6 iSchool graduate courses.
   }
   \resumeSubheading{Manipal Institute of Technology}{Manipal, India}
     {Bachelor of Technology, Information Technology; GPA: 3.7/4}{Jul. 2017 -- Jun. 2021}
@@ -87,11 +92,11 @@
 
 \section{Skills}
 {\small
-  \textbf{Programming Languages:} Python, Java, JavaScript/TypeScript, SQL, C++, Shell Scripting\\
+  \textbf{Languages:} Python, Java, JavaScript/TypeScript, SQL, C++, Shell Scripting\\
   \textbf{Backend/Frontend:} Django, Flask, FastAPI, Next.js, React, REST, OAuth\\
-  \textbf{AI Systems:} Azure AI Search, Microsoft Foundry, RAG, LangChain, Transformers, Agentic IDEs (Claude Code, Codex)\\
-  \textbf{Cloud/Platform:} Azure, AWS, Docker, Kubernetes, Version Control (Git, GitHub, GitLab), CI/CD, Splunk, AppDynamics\\
-  \textbf{Reliability/Infrastructure:} Monitoring, Incident Management, Automation, ITSM (ServiceNow), BigPanda, Unix/Linux\\
+  \textbf{AI Systems:} Azure AI Search, Microsoft Foundry, RAG, LangChain, Transformers, Claude Code, Codex\\
+  \textbf{Cloud/Platform:} Azure, AWS, Docker, Kubernetes, Git/GitHub/GitLab, CI/CD, Splunk, AppDynamics\\
+  \textbf{Reliability:} Monitoring, Incident Management, Automation, ServiceNow (ITSM), BigPanda, Unix/Linux\\
   \textbf{Development Practices:} Agile, Code Review, Unit Testing, System Design, SDLC
 }
 
@@ -100,18 +105,18 @@
   \resumeSubheading{TestSprite\resumeTechnologies{TypeScript, Python}}{Seattle, WA, USA}
     {Software Development Intern}{Jun. 2026 -- Present}
   \resumeItemListStart
-    \resumeItemPlain{Built and shipped end-to-end AI test generation for the TestSprite CLI, bridging terminal workflows with the web portal and enabling 70\% of authenticated developers to generate, debug, and run tests directly from the command line.}
-    \resumeItemPlain{Diagnosed and fixed a project-creation failure affecting 33\% of new developers, restoring reliable first-run onboarding.}
+    \resumeItemPlain{Shipped end-to-end AI test generation in the TestSprite CLI, connecting terminal and web workflows so 70\% of authenticated developers could generate, debug, and run tests from the command line.}
+    \resumeItemPlain{Fixed a project-creation failure blocking 33\% of new developers, restoring reliable first-run onboarding.}
     \resumeItemPlain{Standardized CLI error handling, structured outputs, and exit codes for headless CI/CD and autonomous AI agents.}
   \resumeItemListEnd
   \resumeSubheading{UBS\resumeTechnologies{FastAPI, LangGraph, React}}{Pune, India}
     {Software Engineer (Platform \& Reliability)}{Jul. 2021 -- Aug. 2025}
   \resumeItemListStart
-    \resumeItemPlain{Architected and deployed AutoFlow using FastAPI, LangGraph, and React, building an internal LLM tool that translates natural language prompts into production Amelia workflows, slashing setup time by 95\%.}
-    \resumeItemPlain{Built an Azure AI Search RAG chatbot indexing 20K incident records to automate live diagnosis and resolutions.}
-    \resumeItemPlain{Engineered config-driven Splunk and AppDynamics dashboards across 200+ microservices, cutting incident MTTD by 40\%.}
-    \resumeItemPlain{Automated 20+ recurring incident types and operational workflows with Amelia, saving 200+ engineering hours monthly.}
-    \resumeItemPlain{Maintained 99.8\% uptime SLA for 5 Tier-1 collateral applications processing \$10B+ in daily transaction volume.}
+    \resumeItemPlain{Architected and deployed LLM-powered AutoFlow using FastAPI, LangGraph, and React to generate production Amelia workflows from natural language, reducing setup time by 95\%.}
+    \resumeItemPlain{Built an Azure AI Search RAG chatbot indexing 20K incident records for automated live diagnosis and resolution.}
+    \resumeItemPlain{Built config-driven Splunk/AppDynamics dashboards for 200+ microservices, cutting incident MTTD by 40\%.}
+    \resumeItemPlain{Automated 20+ recurring incident types and workflows in Amelia, saving 200+ engineering hours monthly.}
+    \resumeItemPlain{Maintained a 99.8\% uptime SLA across 5 Tier-1 collateral apps processing \$10B+ in daily transactions.}
   \resumeItemListEnd
   \resumeSubheading{UBS\resumeTechnologies{ARIS, SWIFT}}{Pune, India}
     {Group Technology Intern}{Mar. 2021 -- Jul. 2021}
@@ -125,19 +130,19 @@
   \item
   \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{Generative Sign Language}\resumeTechnologies{Python, FFmpeg} $|$ \href{https://github.com/sanaro99/GenASL}{\textit{\small GitHub}} & \textit{\small Jan. 2026 -- Present} \\
-  \end{tabular*}\vspace{-3pt}
+  \end{tabular*}\vspace{-1pt}
   \resumeItemListStart
-    \resumeItemPlain{Developed a prototype AI system generating sign language overlays for YouTube videos to support Hard-of-Hearing viewers.}
-    \resumeItemPlain{Implemented media processing pipelines using FFmpeg to dynamically sequence and stitch sign language clips into video overlays.}
+    \resumeItemPlain{Built an AI prototype generating sign-language overlays for YouTube videos to support Hard-of-Hearing viewers.}
+    \resumeItemPlain{Built FFmpeg pipelines to dynamically sequence and stitch sign-language clips into video overlays.}
   \resumeItemListEnd
   \item
   \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{Global Personal Cloud}\resumeTechnologies{TrueNAS, NGINX} $|$ \href{https://www.sanchitarora.me/blog/self-hosting}{\textit{\small Overview}} & \textit{\small Feb. 2025 -- Present} \\
-  \end{tabular*}\vspace{-3pt}
+  \end{tabular*}\vspace{-1pt}
   \resumeItemListStart
-    \resumeItemPlain{Built a fault-tolerant TrueNAS cloud with mirrored storage pools and redundant hardware, eliminating single points of failure.}
-    \resumeItemPlain{Designed cross-continent NGINX routing with active read/write splitting across two distributed nodes to minimize global latency.}
-    \resumeItemPlain{Deployed full-stack apps and databases through GitHub CI/CD, managing host infrastructure and secure tunnels.}
+    \resumeItemPlain{Eliminated single points of failure in a TrueNAS cloud through mirrored storage pools and hardware redundancy.}
+    \resumeItemPlain{Designed cross-continent NGINX routing with active read/write splitting across two nodes to reduce latency.}
+    \resumeItemPlain{Deployed full-stack apps and databases through GitHub CI/CD; managed host infrastructure and secure tunnels.}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
