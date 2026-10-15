@@ -1,0 +1,163 @@
+%-------------------------
+% Resume adapted from the supplied Sourabh Bajaj template (MIT License).
+% Content: Sanchit Arora; source resume supplied October 14, 2026.
+% Build: pdflatex -interaction=nonstopmode -halt-on-error sanchit_arora_resume.tex
+%-------------------------
+% Allow the template's Computer Modern fonts to scale to an exact 10.5pt.
+\RequirePackage{fix-cm}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.65in}
+\addtolength{\textheight}{1.3in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\footskip}{5pt}
+\linespread{1.0}
+% Keep the template's font commands while setting the actual body text to 10.5pt.
+\renewcommand{\small}{\fontsize{10.5pt}{12pt}\selectfont}
+\AtBeginDocument{\small}
+\hypersetup{
+  pdftitle={Sanchit Arora - Resume},
+  pdfauthor={Sanchit Arora},
+  pdfsubject={Software Engineering, AI Systems, and Developer Tools}
+}
+
+\titleformat{\section}{\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{3pt}{2pt}
+
+% The original template's two-column headings and nested bullet lists.
+\newcommand{\resumeTechnologies}[1]{\textnormal{\small\enspace$|$\enspace#1}}
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-1pt}
+}
+\newcommand{\resumeItemPlain}[1]{\item\small{#1}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt,label={},topsep=0pt,itemsep=1pt,parsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=12pt,topsep=1pt,itemsep=0pt,parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\renewcommand{\labelitemii}{$\circ$}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.sanchitarora.me}{\Large Sanchit Arora}} & Email: \href{mailto:sanaro@uw.edu}{sanaro@uw.edu} \\
+  Seattle, WA $|$ \href{https://www.sanchitarora.me}{sanchitarora.me} & Mobile: \href{tel:+12066054678}{+1 206-605-4678} \\
+  \href{https://linkedin.com/in/sanaro}{linkedin.com/in/sanaro} & \href{https://github.com/sanaro99}{github.com/sanaro99} \\
+\end{tabular*}
+
+\section{Summary}
+\small Software Engineer and UW graduate student with 4+ years building production AI tools, full-stack systems, and high-availability infrastructure. Owns the product lifecycle from LLM-driven CLI tools to Tier-1 financial systems, focusing on developer productivity and operational reliability at scale.
+
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading{University of Washington}{Seattle, WA, USA}
+    {Master of Science, Information Management; GPA: 3.98/4}{Sep. 2025 -- Jun. 2027 (expected)}
+  {\small
+    Specializations: Artificial Intelligence, Product Management.\\
+    Courses: Implementing \& Managing GenAI Systems, Product Strategy \& Leadership, Cloud Computing \& AI.\\
+    Honors \& Service: Tolo Scholar, Tapia Scholar; Reader \& Grader for 6 iSchool graduate courses.
+  }
+  \resumeSubheading{Manipal Institute of Technology}{Manipal, India}
+    {Bachelor of Technology, Information Technology; GPA: 3.7/4}{Jul. 2017 -- Jun. 2021}
+  {\small Minor: Big Data. Coursework: Machine Learning, Distributed Systems.}
+\resumeSubHeadingListEnd
+
+\section{Skills}
+{\small
+  \textbf{Languages:} Python, Java, JavaScript/TypeScript, SQL, C++, Shell Scripting\\
+  \textbf{Backend/Frontend:} Django, Flask, FastAPI, Next.js, React, REST, OAuth\\
+  \textbf{AI Systems:} Azure AI Search, Microsoft Foundry, RAG, LangChain, Transformers, Claude Code, Codex\\
+  \textbf{Cloud/Platform:} Azure, AWS, Docker, Kubernetes, Git/GitHub/GitLab, CI/CD, Splunk, AppDynamics\\
+  \textbf{Reliability:} Monitoring, Incident Management, Automation, ServiceNow (ITSM), BigPanda, Unix/Linux\\
+  \textbf{Development Practices:} Agile, Code Review, Unit Testing, System Design, SDLC
+}
+
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading{TestSprite\resumeTechnologies{TypeScript, Python}}{Seattle, WA, USA}
+    {Software Development Intern}{Jun. 2026 -- Present}
+  \resumeItemListStart
+    \resumeItemPlain{Shipped end-to-end AI test generation in the TestSprite CLI, connecting terminal and web workflows so 70\% of authenticated developers could generate, debug, and run tests from the command line.}
+    \resumeItemPlain{Fixed a project-creation failure blocking 33\% of new developers, restoring reliable first-run onboarding.}
+    \resumeItemPlain{Standardized CLI error handling, structured outputs, and exit codes for headless CI/CD and autonomous AI agents.}
+  \resumeItemListEnd
+  \resumeSubheading{UBS\resumeTechnologies{FastAPI, LangGraph, React}}{Pune, India}
+    {Software Engineer (Platform \& Reliability)}{Jul. 2021 -- Aug. 2025}
+  \resumeItemListStart
+    \resumeItemPlain{Architected and deployed LLM-powered AutoFlow using FastAPI, LangGraph, and React to generate production Amelia workflows from natural language, reducing setup time by 95\%.}
+    \resumeItemPlain{Built an Azure AI Search RAG chatbot indexing 20K incident records for automated live diagnosis and resolution.}
+    \resumeItemPlain{Built config-driven Splunk/AppDynamics dashboards for 200+ microservices, cutting incident MTTD by 40\%.}
+    \resumeItemPlain{Automated 20+ recurring incident types and workflows in Amelia, saving 200+ engineering hours monthly.}
+    \resumeItemPlain{Maintained a 99.8\% uptime SLA across 5 Tier-1 collateral apps processing \$10B+ in daily transactions.}
+  \resumeItemListEnd
+  \resumeSubheading{UBS\resumeTechnologies{ARIS, SWIFT}}{Pune, India}
+    {Group Technology Intern}{Mar. 2021 -- Jul. 2021}
+  \resumeItemListStart
+    \resumeItemPlain{Designed 20 SWIFT processing workflows in ARIS to standardize and digitize operations procedures for automation.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+  \item
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{Generative Sign Language}\resumeTechnologies{Python, FFmpeg} $|$ \href{https://github.com/sanaro99/GenASL}{\textit{\small GitHub}} & \textit{\small Jan. 2026 -- Present} \\
+  \end{tabular*}\vspace{-1pt}
+  \resumeItemListStart
+    \resumeItemPlain{Built an AI prototype generating sign-language overlays for YouTube videos to support Hard-of-Hearing viewers.}
+    \resumeItemPlain{Built FFmpeg pipelines to dynamically sequence and stitch sign-language clips into video overlays.}
+  \resumeItemListEnd
+  \item
+  \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{Global Personal Cloud}\resumeTechnologies{TrueNAS, NGINX} $|$ \href{https://www.sanchitarora.me/blog/self-hosting}{\textit{\small Overview}} & \textit{\small Feb. 2025 -- Present} \\
+  \end{tabular*}\vspace{-1pt}
+  \resumeItemListStart
+    \resumeItemPlain{Eliminated single points of failure in a TrueNAS cloud through mirrored storage pools and hardware redundancy.}
+    \resumeItemPlain{Designed cross-continent NGINX routing with active read/write splitting across two nodes to reduce latency.}
+    \resumeItemPlain{Deployed full-stack apps and databases through GitHub CI/CD; managed host infrastructure and secure tunnels.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Certifications}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \small UBS Certified Engineer -- Software Engineer, \textit{UBS} & \small Jun. 2025 \\
+  \small Microsoft Azure Cloud Fundamentals (AZ-900), \textit{Microsoft} & \small Jun. 2025 \\
+  \small Microsoft Azure AI Fundamentals (AI-900), \textit{Microsoft} & \small Nov. 2024 \\
+\end{tabular*}
+
+\section{Awards and Recognition}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \small Investment Round Finalist, \textit{Dempsey Startup Competition} & \small Apr. 2026 \\
+  \small Runner-Up, \textit{UW AIMS Product Competition} & \small Feb. 2026 \\
+  \small Quarterly Star Award, \textit{UBS} & \small Apr. 2023 \\
+\end{tabular*}
+
+\end{document}
