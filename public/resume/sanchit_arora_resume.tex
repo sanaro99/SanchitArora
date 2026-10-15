@@ -44,6 +44,7 @@
 \titlespacing*{\section}{0pt}{3pt}{2pt}
 
 % The original template's two-column headings and nested bullet lists.
+\newcommand{\resumeTechnologies}[1]{\textnormal{\small\enspace$|$\enspace#1}}
 \newcommand{\resumeSubheading}[4]{
   \item
   \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
@@ -90,20 +91,20 @@
   \textbf{Backend/Frontend:} Django, Flask, FastAPI, Next.js, React, REST, OAuth\\
   \textbf{AI Systems:} Azure AI Search, Microsoft Foundry, RAG, LangChain, Transformers, Agentic IDEs (Claude Code, Codex)\\
   \textbf{Cloud/Platform:} Azure, AWS, Docker, Kubernetes, Version Control (Git, GitHub, GitLab), CI/CD, Splunk, AppDynamics\\
-  \textbf{Reliability Engineering/Infrastructure:} Monitoring, Incident Management, Automation, ITSM (ServiceNow), BigPanda, Unix/Linux\\
+  \textbf{Reliability/Infrastructure:} Monitoring, Incident Management, Automation, ITSM (ServiceNow), BigPanda, Unix/Linux\\
   \textbf{Development Practices:} Agile, Code Review, Unit Testing, System Design, SDLC
 }
 
 \section{Experience}
 \resumeSubHeadingListStart
-  \resumeSubheading{TestSprite}{Seattle, WA, USA}
+  \resumeSubheading{TestSprite\resumeTechnologies{TypeScript, Python}}{Seattle, WA, USA}
     {Software Development Intern}{Jun. 2026 -- Present}
   \resumeItemListStart
     \resumeItemPlain{Built and shipped end-to-end AI test generation for the TestSprite CLI, bridging terminal workflows with the web portal and enabling 70\% of authenticated developers to generate, debug, and run tests directly from the command line.}
-    \resumeItemPlain{Diagnosed and resolved a project-creation failure, unblocking 33\% of new developers and establishing a reliable first-run onboarding flow.}
-    \resumeItemPlain{Standardized CLI error handling, structured outputs, and exit codes for headless CI/CD pipelines and autonomous AI agent execution.}
+    \resumeItemPlain{Diagnosed and fixed a project-creation failure affecting 33\% of new developers, restoring reliable first-run onboarding.}
+    \resumeItemPlain{Standardized CLI error handling, structured outputs, and exit codes for headless CI/CD and autonomous AI agents.}
   \resumeItemListEnd
-  \resumeSubheading{UBS}{Pune, India}
+  \resumeSubheading{UBS\resumeTechnologies{FastAPI, LangGraph, React}}{Pune, India}
     {Software Engineer (Platform \& Reliability)}{Jul. 2021 -- Aug. 2025}
   \resumeItemListStart
     \resumeItemPlain{Architected and deployed AutoFlow using FastAPI, LangGraph, and React, building an internal LLM tool that translates natural language prompts into production Amelia workflows, slashing setup time by 95\%.}
@@ -112,10 +113,10 @@
     \resumeItemPlain{Automated 20+ recurring incident types and operational workflows with Amelia, saving 200+ engineering hours monthly.}
     \resumeItemPlain{Maintained 99.8\% uptime SLA for 5 Tier-1 collateral applications processing \$10B+ in daily transaction volume.}
   \resumeItemListEnd
-  \resumeSubheading{UBS}{Pune, India}
+  \resumeSubheading{UBS\resumeTechnologies{ARIS, SWIFT}}{Pune, India}
     {Group Technology Intern}{Mar. 2021 -- Jul. 2021}
   \resumeItemListStart
-    \resumeItemPlain{Designed 20 SWIFT processing workflows in ARIS, standardizing and digitizing procedures across operations teams to enable automation.}
+    \resumeItemPlain{Designed 20 SWIFT processing workflows in ARIS to standardize and digitize operations procedures for automation.}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -123,7 +124,7 @@
 \resumeSubHeadingListStart
   \item
   \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{Generative Sign Language} $|$ \href{https://github.com/sanaro99/GenASL}{\textit{\small github.com/sanaro99/GenASL}} & \textit{\small Jan. 2026 -- Present} \\
+    \textbf{Generative Sign Language}\resumeTechnologies{Python, FFmpeg} $|$ \href{https://github.com/sanaro99/GenASL}{\textit{\small GitHub}} & \textit{\small Jan. 2026 -- Present} \\
   \end{tabular*}\vspace{-3pt}
   \resumeItemListStart
     \resumeItemPlain{Developed a prototype AI system generating sign language overlays for YouTube videos to support Hard-of-Hearing viewers.}
@@ -131,12 +132,12 @@
   \resumeItemListEnd
   \item
   \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{Global Personal Cloud} $|$ \href{https://www.sanchitarora.me/blog/self-hosting}{\textit{\small sanchitarora.me/blog/self-hosting}} & \textit{\small Feb. 2025 -- Present} \\
+    \textbf{Global Personal Cloud}\resumeTechnologies{TrueNAS, NGINX} $|$ \href{https://www.sanchitarora.me/blog/self-hosting}{\textit{\small Overview}} & \textit{\small Feb. 2025 -- Present} \\
   \end{tabular*}\vspace{-3pt}
   \resumeItemListStart
-    \resumeItemPlain{Engineered a fault-tolerant TrueNAS cloud, eliminating single points of failure through mirrored storage pools and hardware redundancy.}
-    \resumeItemPlain{Designed a cross-continent NGINX architecture with active read/write splitting across two distributed nodes to minimize global latency.}
-    \resumeItemPlain{Deployed full-stack applications and databases via GitHub CI/CD, managing host infrastructure and secure exposure through tunneling.}
+    \resumeItemPlain{Built a fault-tolerant TrueNAS cloud with mirrored storage pools and redundant hardware, eliminating single points of failure.}
+    \resumeItemPlain{Designed cross-continent NGINX routing with active read/write splitting across two distributed nodes to minimize global latency.}
+    \resumeItemPlain{Deployed full-stack apps and databases through GitHub CI/CD, managing host infrastructure and secure tunnels.}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
