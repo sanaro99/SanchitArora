@@ -8,7 +8,7 @@ export const DATA = {
   location: "Seattle, WA",
   locationLink: "https://www.google.com/maps/place/seattle",
   description:
-    "Software Engineer · AI systems & developer tools · UW MSIM ’27",
+    "Software Engineer · Platform reliability, AI tooling & solutions architecture · UW MSIM ’27",
   summary:
     "I build AI tools that people can use and trust. At TestSprite, I worked on CLI test-plan generation, developer workflows, and the reliability of AI-driven testing. Before that, I spent 4+ years at UBS building automation, full-stack systems, and production reliability tooling, including an LLM-powered platform that reduced automation setup time by 95% across 20 engineering teams. I’m pursuing an MS in Information Management at the University of Washington (3.98 GPA), specializing in Artificial Intelligence and Product Management. Outside work, I build products for job applications, consumer trust, travel, reflection, and accessible video.",
   avatarUrl: "/me.jpg",
@@ -120,14 +120,14 @@ export const DATA = {
       href: "https://www.ubs.com",
       badges: ["AI", "Automation", "Azure", "Python", "Unix", "SQL", "Splunk", "Git", "AppDynamics", "BigPanda", "Amelia", "Docker", "Kubernetes", "ReactJS"],
       location: "Pune, India",
-      title: "Sr. Software Engineer & Site Reliability Engineer",
+      title: "Senior Software Engineer, Platform & Reliability",
       logoUrl: "/ubs.png",
       start: "March 2024",
       end: "August 2025",
       description:
         `• Led AutoFlow development — an LLM-powered tool converting natural language to Amelia automation workflows using GPT-4.1, LangGraph, and FastAPI with React frontend; reduced automation setup time by 95% across 20 engineering teams<br />
-      • Launched RAG chatbot using Azure AI Search indexing 5 years of team emails (~50K docs), delivering automated incident diagnosis and step-by-step resolutions for production issues<br />
-      • Engineered config-driven monitoring dashboard with dynamic UI generation, aggregating Splunk server health, AppDynamics microservices health, and ServiceNow ticket data for 30+ teams; reduced mean time to detection (MTTD) by 60%<br />
+      • Launched RAG chatbot using Azure AI Search indexing 20K+ incident records from 5 years of team operations history, delivering automated incident diagnosis and step-by-step resolutions for production issues<br />
+      • Engineered config-driven monitoring dashboard with dynamic UI generation, aggregating Splunk server health, AppDynamics microservices health, and ServiceNow ticket data for 30+ teams; reduced mean time to detection (MTTD) by 40%<br />
       • Partnered with product managers and operations leadership to scope and design AI tooling for $10B+ daily transaction systems under regulatory, cost, and latency constraints
       `,
     },
@@ -136,14 +136,14 @@ export const DATA = {
       href: "https://www.ubs.com",
       badges: ["Automation", "Splunk", "AppDynamics", "Python", "Unix", "SQL", "Docker", "Kubernetes"],
       location: "Pune, India",
-      title: "Software Engineer & Site Reliability Engineer",
+      title: "Software Engineer, Platform & Reliability",
       logoUrl: "/ubs.png",
       start: "July 2021",
       end: "March 2024",
       description:
         `• Automated 20+ recurring incident types, operational requests, and weekend startup checks using Amelia IPSoft for 300+ internal users, saving 200+ engineering hours monthly<br />
       • Built shift handover platform tracking deliverables, blockers, and workload across regional shifts (Pune, Zurich, NYC), cutting handoff time by 40% with real-time manager dashboards<br />
-      • Created observability dashboards in Splunk and AppDynamics monitoring 200+ microservices across 5 Tier-1 applications, reducing incident detection time by 60% with proactive alerts<br />
+      • Created observability dashboards in Splunk and AppDynamics monitoring 200+ microservices across 5 Tier-1 applications, reducing incident detection time by 40% with proactive alerts<br />
       • Managed incident response for 5 Tier-1 collateral applications processing $10B+ in daily transactions, maintaining 99.8% uptime through root-cause analysis and post-incident reviews<br />
       • Earned the Engineering Excellence Award (Aug 2022) and Quarterly Star Award (Apr 2023), recognized by directors for sustained contributions to automation, observability, and operations<br />
       • Owned the team's knowledge repository in Confluence; standardized article creation, peer review, and quarterly maintenance, cutting onboarding ramp time for new engineers by roughly 30%
@@ -230,9 +230,9 @@ export const DATA = {
   projects: [
     {
       title: "Applination",
-      href: "https://applination.sanchitarora.me",
+      href: "https://github.com/sanaro99/applination",
       dates: "2026 – Present",
-      status: "Live app",
+      status: "Open source",
       description: "A job-application workspace that finds postings, scores them against your profile, and prepares tailored resumes and cover letters. I built the Python/FastAPI engine and Next.js interface, with per-user data isolation, encrypted provider keys, a tracker, interview preparation, and a Chrome autofill extension. Bring a cloud model or connect local Ollama. The guided demo uses a fictional candidate and simulated AI responses.",
       technologies: ["Python", "FastAPI", "Next.js", "PostgreSQL", "LLMs", "Chrome Extension"],
       image: "/projects/applination.png",
@@ -246,7 +246,6 @@ export const DATA = {
         { type: "video", src: "/projects/applination-walkthrough.webm", poster: "/projects/applination.png", alt: "Applination demo walkthrough", caption: "Recorded navigation through the fictional demo workspace, with simulated AI responses." },
       ],
       links: [
-        { type: "Live", href: "https://applination.sanchitarora.me", icon: <Icons.globe className="size-3" /> },
         { type: "Source", href: "https://github.com/sanaro99/applination", icon: <Icons.github className="size-3" /> },
       ],
       video: undefined,
@@ -315,7 +314,7 @@ export const DATA = {
     },
     {
       title: "Luggist",
-      href: "https://luggist.sanchitarora.me",
+      href: "https://luggist.vercel.app",
       dates: "2025 – Present",
       status: "Live app",
       description: "An installable packing tracker that organizes trips into bags, cubes, and items, with checklists and packing progress. I built reactive IndexedDB storage, reusable templates, drag-and-drop organization, and offline support. The core tracker stores data in your browser and needs no account or AI connection. Optional AI tools send the requested trip or packing context to a configured provider to draft lists and suggest forgotten items.",
@@ -324,7 +323,7 @@ export const DATA = {
       imageAlt: "Luggist sample weekend trip with a bag, packing checklist, and progress bar",
       imageCaption: "Sample trip created from a built-in template.",
       links: [
-        { type: "Live", href: "https://luggist.sanchitarora.me", icon: <Icons.globe className="size-3" /> },
+        { type: "Live", href: "https://luggist.vercel.app", icon: <Icons.globe className="size-3" /> },
         { type: "Source", href: "https://github.com/sanaro99/Luggist", icon: <Icons.github className="size-3" /> },
       ],
       video: undefined,
@@ -364,7 +363,7 @@ export const DATA = {
       href: "/blog/self-hosting",
       dates: "2025 – Present",
       status: "Personal infrastructure",
-      description: "A self-hosted platform for storage, backups, virtual machines, and personal web applications. I built on TrueNAS and ZFS, then added container hosting, HTTPS routing through Cloudflare and Traefik, and GitHub Actions image builds. It now supports products such as Applination and Luggist. The work spans service deployment, persistent storage, monitoring, and operating applications beyond a local development machine.",
+      description: "A self-hosted platform for storage, backups, virtual machines, and personal web applications. I built on TrueNAS and ZFS, then added container hosting, HTTPS routing through Cloudflare and Traefik, and GitHub Actions image builds. It has hosted products such as Applination and Luggist. The work spans service deployment, persistent storage, monitoring, and operating applications beyond a local development machine.",
       technologies: ["TrueNAS", "ZFS", "Docker", "Traefik", "Cloudflare", "GitHub Actions", "Linux"],
       image: "/projects/trueNAS.png",
       imageAlt: "Server hardware used for the personal cloud project",

@@ -1,16 +1,16 @@
 # Portfolio content and assets
 
-Content reviewed October 2, 2026. The portfolio keeps current products, research, prototypes, and earlier work together, with a visible stage on each project card. A source link does not imply a public demo is available.
+Content reviewed November 20, 2026. The portfolio keeps current products, research, prototypes, and earlier work together, with a visible stage on each project card. A source link does not imply a public demo is available.
 
 ## Project references
 
 | Project | Reference | What the card describes |
 | --- | --- | --- |
-| Applination | [Repository](https://github.com/sanaro99/applination), [app](https://applination.sanchitarora.me) | Job matching, tailored documents, tracking, interview preparation, extension and local-model support. Proposed batch-processing work is not advertised as shipped. |
+| Applination | [Repository](https://github.com/sanaro99/applination) | Job matching, tailored documents, tracking, interview preparation, extension and local-model support. Proposed batch-processing work is not advertised as shipped. |
 | Trusten | [Repository](https://github.com/sanaro99/trusten) | Headless scanning, extension, dashboard and evidence reports. Findings indicate possible manipulation and regulatory implications. |
 | Kalp | [Repository](https://github.com/sanaro99/kalp) | Local journal, activities, focus check-ins, small changes and weekly review. Observed associations do not establish causation. |
 | CoupleOGames | [Repository](https://github.com/sanaro99/coupleogames) | Four synchronized two-player games. Public launch remains on hold. |
-| Luggist | [Repository](https://github.com/sanaro99/Luggist), [app](https://luggist.sanchitarora.me) | Offline packing tracker, templates and optional AI assistance. AI features send their task context to the configured provider. |
+| Luggist | [Repository](https://github.com/sanaro99/Luggist), [app](https://luggist.vercel.app) | Offline packing tracker, templates and optional AI assistance. AI features send their task context to the configured provider. |
 | ASL gloss research | [Repository](https://github.com/sanaro99/sign-lang-gen) | Stage 1 gloss/marker translation and four-condition evaluation. No claim of validated interpreter quality or complete video generation. |
 | GenASL | [Repository](https://github.com/sanaro99/GenASL) | Overlay prototype and avatar direction still in build-out. |
 | Sanchit Cloud | [Original blog](https://www.sanchitarora.me/blog/self-hosting) | Storage, backups and application hosting. Private deployment details are omitted. The blog records the original build rather than a current infrastructure runbook. |
@@ -43,6 +43,8 @@ Existing historical images and documented work, education, awards and certificat
 ## Keeping the site current
 
 Update `src/data/resume.tsx` and add genuine assets under `public/`. For a project, verify the description against its current implementation, set an accurate stage, and choose the live app, source or write-up as its primary destination. Keep captions on sample data and older prototypes. Recheck dated claims and performance numbers before changing them.
+
+The first eight entries in `DATA.projects` are featured; the rest sit behind a native **Show earlier projects** disclosure, so order the array by priority. Applination links to its repository while its self-hosted demo is offline.
 
 Project cards accept an optional `media` array. Each entry has `type` (`image` or `video`), `src`, descriptive `alt`, and an optional `caption`; a video can also have a `poster`. Put the cover image first. Existing single `image`/`video` fields remain supported when no gallery array is supplied. The gallery loads video metadata only when its slide is selected, uses native playback controls without autoplay, and stops playback when changing slides or closing. Visitors can use arrows, thumbnails, keyboard keys or a horizontal swipe; Escape, the visible close button and the backdrop dismiss the viewer.
 
