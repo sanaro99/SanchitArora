@@ -8,12 +8,38 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
-import { Download } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
+const FEATURED_PROJECT_COUNT = 8;
+const FEATURED_PROJECTS = DATA.projects.slice(0, FEATURED_PROJECT_COUNT);
+const EARLIER_PROJECTS = DATA.projects.slice(FEATURED_PROJECT_COUNT);
+
+type Project = (typeof DATA.projects)[number];
+
+function renderProject(project: Project, delay: number) {
+  return (
+    <BlurFade key={project.title} delay={delay}>
+      <ProjectCard
+        href={project.href}
+        title={project.title}
+        description={project.description}
+        dates={project.dates}
+        status={project.status}
+        tags={project.technologies}
+        image={project.image}
+        imageAlt={project.imageAlt}
+        imageCaption={project.imageCaption}
+        video={project.video}
+        media={"media" in project ? project.media : undefined}
+        links={project.links}
+      />
+    </BlurFade>
+  );
+}
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -148,29 +174,22 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 14 + id * 0.07}
-              >
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  status={project.status}
-                  tags={project.technologies}
-                  image={project.image}
-                  imageAlt={project.imageAlt}
-                  imageCaption={project.imageCaption}
-                  video={project.video}
-                  media={"media" in project ? project.media : undefined}
-                  links={project.links}
-                />
-              </BlurFade>
-            ))}
+            {FEATURED_PROJECTS.map((project, id) =>
+              renderProject(project, BLUR_FADE_DELAY * 14 + id * 0.07)
+            )}
           </div>
+          {EARLIER_PROJECTS.length > 0 && (
+            <details className="group max-w-[800px] mx-auto">
+              <summary className="mx-auto flex w-fit cursor-pointer list-none items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring [&::-webkit-details-marker]:hidden">
+                <span className="group-open:hidden">Show earlier projects ({EARLIER_PROJECTS.length})</span>
+                <span className="hidden group-open:inline">Hide earlier projects</span>
+                <ChevronDown className="size-4 transition-transform group-open:rotate-180" aria-hidden="true" />
+              </summary>
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {EARLIER_PROJECTS.map((project) => renderProject(project, 0))}
+              </div>
+            </details>
+          )}
         </div>
       </section>
 
